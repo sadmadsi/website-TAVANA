@@ -82,7 +82,6 @@ export default function Section3() {
                                 <td className="py-4 px-6">
                                     CSO
                                 </td>
-
                             </tr>
                             <tr className="bg-black border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
                                 <td className="py-4 px-6">
