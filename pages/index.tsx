@@ -1,11 +1,12 @@
+import { lazy } from 'react';
 import Appbar from "../components/appbar/Appbar";
-import Footer from "../components/appbar/Footer";
-import Section1 from "../components/home/Section1";
-import Section2 from "../components/home/Section2";
-import Section3 from "../components/home/Section3";
-import Section4 from "../components/home/Section4";
-import Section5 from "../components/home/Section5";
-import Section6 from "../components/home/Section6";
+const Footer = lazy(() => import("../components/appbar/Footer"));
+const Section1 = lazy(() => import("../components/home/Section1"));
+const Section2 = lazy(() => import("../components/home/Section2"));
+const Section3 = lazy(() => import("../components/home/Section3"));
+const Section4 = lazy(() => import("../components/home/Section4"));
+const Section5 = lazy(() => import("../components/home/Section5"));
+const Section6 = lazy(() => import("../components/home/Section6"));
 import TimeLine from "../components/home/TimeLine";
 
 export default function Home() {

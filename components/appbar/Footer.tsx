@@ -88,9 +88,9 @@ export default function Footer() {
         },
     ]
     return (
-        <footer className="bg-black flex py-20 px-10">
+        <div className="bg-black flex py-20 px-10">
             <div className={'grow'}>
-                <Image src={'/photos/Frame.svg'} height={50} width={180} alt={'tavana'} />
+                <Image src={'/photos/Frame.svg'} height={50} width={180} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
             </div>
             {
                 footerItem.map((item: any) => {
@@ -129,12 +129,12 @@ export default function Footer() {
                     {contact.map((item: any) => {
                         return (
                             <Link href={item.href} key={item.icon}>
-                                <Image src={item.icon} height={30} width={30} alt={item.href} />
+                                <Image src={item.icon} height={30} width={30} alt={item.href} style={{ height: 'auto', width: 'auto' }} />
                             </Link>
                         )
                     })}
                 </div>
             </div>
-        </footer >
+        </div >
     )
 }
