@@ -41,7 +41,7 @@ export default function AppbarV2() {
             <div className="fixed flex top-0 px-10 w-full text-white bg-black py-2 items-center z-10">
                 <div className="flex space-x-10 space-x-reverse">
                     <Link href={'/'}>
-                        <Image src={'/icons/vector.svg'} height={35} width={35} alt={'tavana'} />
+                        <Image src={'/icons/Vector.svg'} height={35} width={35} alt={'tavana'} />
                     </Link>
                     {
                         navigation.map((menu: any) => {
