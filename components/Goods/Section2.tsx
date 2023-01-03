@@ -31,7 +31,7 @@ export default function Section2() {
                 <div className="grid grid-cols-3 gap-3">
                     {cards.map((item: any) => {
                         return (
-                            <div className="border-2 border-black p-10 text-black flex">
+                            <div key={item.title} className="border-2 border-black p-10 text-black flex">
                                 <ChevronLeftIcon className='h-5 w-5 ml-5' />
                                 <div>{item.title}</div>
                             </div>
