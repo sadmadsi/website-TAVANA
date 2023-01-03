@@ -40,7 +40,7 @@ export default function Appbar() {
         <div className="fixed top-0 w-full text-white">
             <div className={`flex bg-black transition-all ${scrollDir === 'down' ? 'py-2' : 'py-7'}`}>
                 <div className="mx-auto">
-                    {scrollDir === 'down' ? <Image src={'/icons/vector.svg'} height={50} width={50} alt={'tavana'} /> : <Image src={'/icons/tavana_logo.svg'} height={100} width={100} alt={'tavana'} />}
+                    {scrollDir === 'down' ? <Image src={'/icons/Vector.svg'} height={50} width={50} alt={'tavana'} /> : <Image src={'/icons/tavana_logo.svg'} height={100} width={100} alt={'tavana'} />}
                 </div>
             </div>
             <div className={`relative flex justify-center space-x-7 overflow-hidden bg-black/30 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-10'} ${open ? 'backdrop-blur-md' : 'backdrop-blur-sm'}`}>

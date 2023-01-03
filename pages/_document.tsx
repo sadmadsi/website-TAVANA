@@ -7,7 +7,7 @@ class MyDocument extends Document {
             <Html dir={"rtl"}>
                 <Head>
                     <link rel='stylesheet' href='/pelakFontFamily.css' />
-                    <link rel='shortcut icon' href='/icons/vector.svg' />
+                    <link rel='shortcut icon' href='/icons/Vector.svg' />
                 </Head>
                 <body className={'custom-scrollbar'}>
                     <Main />
