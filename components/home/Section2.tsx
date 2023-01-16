@@ -5,7 +5,7 @@ import {
 export default function Section2() {
     return (
         <section className="bg-navy">
-            <div className='container flex justify-between h-full py-10'>
+            <div className='container flex justify-between h-full py-16'>
                 <div className='grow flex flex-col basis-1/2'>
                     <h1>معامله<br />
                         با پلتفرم برتر بازار</h1>
@@ -17,7 +17,7 @@ export default function Section2() {
                         </span>
                     </button>
                 </div>
-                <div className="grow h-full bg-[url('/photos/mobile_trade.svg')] bg-no-repeat bg-contain bg-center basis-1/2" />
+                <div className="grow h-full bg-[url('/photos/mobile_trade.svg')] bg-no-repeat bg-cover bg-center basis-1/2" />
             </div>
         </section>
     )

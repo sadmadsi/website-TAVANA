@@ -5,8 +5,8 @@ import {
 export default function TimeLine() {
     return (
         <div className="flex flex-col justify-end h-screen bg-[url('/photos/ski_bg.png')] bg-no-repeat bg-cover">
-            <div className='container py-10'>
-                <div className='w-1/2'>
+            <div className='container py-16 mt-56'>
+                <div className='w-full sm:w-full lg:w-1/2'>
                     <h1>
                         سرمایه‌گذاری <br /> تخصصی در بورس
                     </h1>

@@ -88,7 +88,7 @@ export default function Footer() {
         },
     ]
     return (
-        <div className="bg-black flex py-20 px-10">
+        <div className="bg-black md:flex md:flex-row grid grid-cols-2 gap-5 py-20 px-10">
             <div className={'grow'}>
                 <Image src={'/photos/Frame.svg'} height={50} width={180} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
             </div>

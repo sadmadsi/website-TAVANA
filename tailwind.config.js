@@ -52,6 +52,20 @@ module.exports = {
         'h1': { fontSize: theme('fontSize.7xl'), fontWeight: theme('fontWeight.bold') },
         'h2': { fontSize: theme('fontSize.xl') },
       })
-    })
+    }),
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '100%',
+          '@screen sm': {
+            maxWidth: '640px',
+          },
+          '@screen md': {
+            padding: '80px',
+            maxWidth: '100%',
+          }
+        }
+      })
+    }
   ]
 }

@@ -4,11 +4,18 @@ import {
     ChevronLeftIcon
 } from '@heroicons/react/24/outline'
 import { useScrollDirection } from "../../hooks/useScrollDirection";
-import { useCallback, useEffect, useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
+import _ from 'lodash'
 
 export default function Appbar() {
     const [open, setOpen] = useState(false)
-    const scrollDir = useScrollDirection()
+    const [expand, setExpand] = useState(false)
+    const [scrollDir, setScrollDirection] = useState('up');
+
+    const blocking = useRef(false);
+    const prevScrollY = useRef(0);
+
+    // const scrollDir = useScrollDirection()
 
     const navigation = [
         {
@@ -36,6 +43,44 @@ export default function Appbar() {
             dropdown: true
         },
     ]
+
+
+    function _showSearchOnHeader(e: any) {
+        prevScrollY.current = window.pageYOffset;
+
+        const updateScrollDirection = () => {
+            const scrollY = window.pageYOffset;
+
+            if (Math.abs(scrollY - prevScrollY.current) >= 0) {
+                const newScrollDirection =
+                    scrollY > prevScrollY.current ? 'down' : 'up';
+
+                setScrollDirection(newScrollDirection);
+
+                prevScrollY.current = scrollY > 0 ? scrollY : 0;
+            }
+
+            blocking.current = false;
+        };
+
+        const onScroll = () => {
+            if (!blocking.current) {
+                blocking.current = true;
+                window.requestAnimationFrame(updateScrollDirection);
+            }
+        };
+
+        window.addEventListener('scroll', onScroll);
+
+        return () => window.removeEventListener('scroll', onScroll);
+
+    }
+
+    const showSearchOnHeader = useCallback(_.throttle(_showSearchOnHeader, 100), [])
+
+    useEffect(() => {
+        showSearchOnHeader()
+    }, [])
 
     return (
         <div className="fixed top-0 w-full text-white">

@@ -1,3 +1,5 @@
+@import url(../public/pelakFontFamily.css);
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -41,7 +43,13 @@ h1 {
 }
 
 section {
-  height: 70vh;
+  height: 800px;
+}
+
+.linear {
+  background: linear-gradient(to bottom,
+      #F37021 70%,
+      white 20%)
 }
 
 @media (prefers-color-scheme: dark) {
