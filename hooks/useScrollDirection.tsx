@@ -1,44 +1,26 @@
 import { useEffect, useState, useRef } from 'react';
 
-const THRESHOLD = 0;
-
-const useScrollDirection = () => {
-  const [scrollDirection, setScrollDirection] = useState('up');
-
-  const blocking = useRef(false);
-  const prevScrollY = useRef(0);
+export default function useScrollDirection() {
+  const [scrollDirection, setScrollDirection] = useState<string>('up');
 
   useEffect(() => {
-    prevScrollY.current = window.pageYOffset;
+    let lastScrollY = window.pageYOffset;
 
     const updateScrollDirection = () => {
       const scrollY = window.pageYOffset;
-
-      if (Math.abs(scrollY - prevScrollY.current) >= THRESHOLD) {
-        const newScrollDirection =
-          scrollY > prevScrollY.current ? 'down' : 'up';
-
-        setScrollDirection(newScrollDirection);
-
-        prevScrollY.current = scrollY > 0 ? scrollY : 0;
+      const direction: string = scrollY > lastScrollY ? "down" : "up";
+      if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
+        setScrollDirection(direction);
       }
-
-      blocking.current = false;
+      lastScrollY = scrollY > 0 ? scrollY : 0;
     };
-
-    const onScroll = () => {
-      if (!blocking.current) {
-        blocking.current = true;
-        window.requestAnimationFrame(updateScrollDirection);
-      }
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener("scroll", updateScrollDirection); // add event listener
+    return () => {
+      window.removeEventListener("scroll", updateScrollDirection); // clean up
+    }
   }, [scrollDirection]);
 
   return scrollDirection;
-};
+}
 
-export { useScrollDirection };
+
