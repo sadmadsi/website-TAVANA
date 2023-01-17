@@ -79,7 +79,7 @@ export default function Appbar() {
     const showSearchOnHeader = useCallback(_.throttle(_showSearchOnHeader, 100), [])
 
     useEffect(() => {
-        showSearchOnHeader()
+        showSearchOnHeader
     }, [])
 
     return (
