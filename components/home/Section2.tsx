@@ -1,6 +1,7 @@
 import {
     ChevronLeftIcon,
 } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 export default function Section2() {
     return (
@@ -17,7 +18,9 @@ export default function Section2() {
                         </span>
                     </button>
                 </div>
-                <div className="grow h-full bg-[url('/photos/mobile_trade.svg')] bg-no-repeat bg-cover bg-center basis-1/2" />
+                <div className="relative grow h-full basis-1/2">
+                    <Image src={'/photos/mobile_trade.svg'} fill alt={'trade'} style={{ objectFit: 'cover' }} />
+                </div>
             </div>
         </section>
     )

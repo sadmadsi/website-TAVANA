@@ -39,7 +39,7 @@ export default function Appbar() {
     ]
 
     return (
-        <div className="fixed top-0 w-full text-white">
+        <div className="fixed top-0 w-full text-white z-10">
             <div className={`flex bg-black transition-all ${scrollDir === 'down' ? 'py-2' : 'py-7'}`}>
                 <div className="mx-auto">
                     {scrollDir === 'down' ? <Image src={'/icons/Vector.svg'} height={50} width={50} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} /> : <Image src={'/icons/tavana_logo.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />}

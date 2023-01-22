@@ -1,6 +1,7 @@
 import {
     ChevronLeftIcon,
 } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 export default function Section4() {
     return (
@@ -24,7 +25,9 @@ export default function Section4() {
                         </button>
                     </div>
                 </div>
-                <div className="grow h-full bg-[url('/photos/tesla.svg')] bg-no-repeat bg-cover bg-center basis-1/2" />
+                <div className="grow h-full relative basis-1/2" >
+                    <Image src={'/photos/tesla.svg'} fill alt={'trade'} style={{ objectFit: 'cover' }} />
+                </div>
             </div>
         </section>
     )
