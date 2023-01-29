@@ -11,7 +11,7 @@ export default function Section1() {
                     شناخت دقیق بازار را از ما بخواهید
                 </h2>
             </div>
-            <div className="bg-[url(/photos/energy.jpg)] bg-cover bg-no-repeat h-full basis-1/2" />
+            <div className="bg-[url(/photos/energy.jpg)] bg-contain bg-no-repeat h-full basis-1/2" />
         </section>
     )
 }

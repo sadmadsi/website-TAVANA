@@ -32,7 +32,7 @@ export default function AccordionComponent({ items, title }: { items: any, title
                         {
                             items.map((account: any) => {
                                 return (
-                                    <div className="border-2 border-black bg-white text-black flex sm:flex-row flex-col sm:py-5 sm:px-2 items-center">
+                                    <div key={account.bank + account.accountNumber} className="border-2 border-black bg-white text-black flex sm:flex-row flex-col sm:py-5 sm:px-2 items-center">
                                         <div className="flex text-right items-center sm:w-1/5 w-full border-b-2 border-b-black sm:border-b-0 py-3 sm:px-0 px-5">
                                             <Image src={`/icons/${account.icon}`} alt={'melli'} height={48} width={48} />
                                             <span className="mr-2">{account.bank}</span>

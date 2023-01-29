@@ -10,7 +10,7 @@ export default function Section1() {
                     قدم به قدم همراهتان هستیم.
                 </h2>
             </div>
-            <div className="bg-[url(/photos/kala.jpg)] bg-cover bg-no-repeat h-full basis-1/2" />
+            <div className="bg-[url(/photos/kala.jpg)] bg-contain bg-no-repeat h-full basis-1/2" />
         </section>
     )
 }
