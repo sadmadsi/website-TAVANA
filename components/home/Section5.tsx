@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Section5() {
     return (
         <section className="relative">
-            <Image src={'/photos/structure.png'} fill alt={'trade'} />
+            <Image src={'/photos/structure.jpg'} fill alt={'trade'} />
             <div className='container py-16 flex h-full'>
                 <div className="h-full bg-black text-white flex flex-col mr-auto w-1/3 p-10 basis-1/2 z-[9]" >
                     <h1>مؤسس<br />

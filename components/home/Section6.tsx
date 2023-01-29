@@ -19,7 +19,7 @@ export default function Section6() {
                     </button>
                 </div>
                 <div className="grow h-full relative basis-1/2 bg-center" >
-                    <Image src={'/photos/ship.svg'} fill alt={'ship'} style={{ objectFit: 'cover' }} />
+                    <Image src={'/photos/ship.jpg'} fill alt={'ship'} style={{ objectFit: 'cover' }} />
                 </div>
             </div>
 

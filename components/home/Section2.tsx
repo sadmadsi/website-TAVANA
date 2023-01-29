@@ -19,7 +19,7 @@ export default function Section2() {
                     </button>
                 </div>
                 <div className="relative grow h-full basis-1/2">
-                    <Image src={'/photos/mobile_trade.svg'} fill alt={'trade'} style={{ objectFit: 'cover' }} />
+                    <Image src={'/photos/online-plus.jpg'} fill alt={'trade'} style={{ objectFit: 'cover' }} />
                 </div>
             </div>
         </section>

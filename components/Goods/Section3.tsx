@@ -6,71 +6,50 @@ export default function Section3() {
 
     const cards = [
         {
-            title: 'مشاوره و انجام تمامی امور اجرایی برای پذیرش شرکت‌ها در بورس کالا'
+            title: 'Bitumen(pure, emulsion and...)'
         },
         {
-            title: 'مشاوره و انجام تمامی امور اجرایی برای پذیرش کالاهای منقول و غیرمنقول'
+            title: 'Aluminium'
         },
         {
-            title: 'عرضه کالاهای منقول و غیرمنقول پذیرش شده در بورس کالا'
+            title: 'Steel'
         },
         {
-            title: 'ارائه گزارش از محصولات عرضه شده در بورس کالا به مشتریان'
+            title: 'Zinc'
         },
         {
-            title: 'ارائه گزارش از معاملات بورس کالا و اخبار بازار سرمایه به مشتریان'
+            title: 'Polymer products'
         },
         {
-            title: 'انجام معاملات تمامی کالاهای قابل معامله در بورس کالای ایران (داخلی و صادراتی)'
+            title: 'Oil'
+        },
+        {
+            title: 'Chemical products'
+        },
+        {
+            title: 'Gold'
+        },
+        {
+            title: 'Vaccum Bottom'
         },
     ]
     return (
-        <div className="bg-black text-white">
+        <section className="bg-[#AC8EE8]">
             <div className="container p-10">
                 <h1>مهم‌ترین موارد قابل معامله<br />
                     در بورس کالای ایران</h1>
-                <div className="overflow-x-auto relative mt-10">
-                    <table className="w-full text-sm">
-                        <tbody>
-                            <tr className="bg-[#292929] border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    Bitumen(pure, emulsion and...)
-                                </td>
-                                <td className="py-4 px-6">
-                                    Aluminium
-                                </td>
-                                <td className="py-4 px-6">
-                                    Steel
-                                </td>
-                            </tr>
-                            <tr className="bg-black border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    Zinc
-                                </td>
-                                <td className="py-4 px-6">
-                                    Polymer products
-                                </td>
-                                <td className="py-4 px-6">
-                                    Oil
-                                </td>
-                            </tr>
-                            <tr className="bg-[#292929] border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    Chemical products
-                                </td>
-                                <td className="py-4 px-6">
-                                    Gold
-                                </td>
-                                <td className="py-4 px-6">
-                                    Vaccum Bottom
-                                </td>
-
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="relative mt-10">
+                    <div className="grid grid-cols-3 gap-8">
+                        {cards.map((item: any) => {
+                            return (
+                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-3 text-black flex">
+                                    <div>{item.title}</div>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
-
             </div>
-        </div>
+        </section>
     )
 }

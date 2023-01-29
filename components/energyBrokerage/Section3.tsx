@@ -6,121 +6,92 @@ export default function Section3() {
 
     const cards = [
         {
-            title: 'مشاوره و انجام تمامی امور اجرایی برای پذیرش شرکت‌ها در بورس کالا'
+            title: 'LPG'
         },
         {
-            title: 'مشاوره و انجام تمامی امور اجرایی برای پذیرش کالاهای منقول و غیرمنقول'
+            title: 'Kerosene'
         },
         {
-            title: 'عرضه کالاهای منقول و غیرمنقول پذیرش شده در بورس کالا'
+            title: 'Fuel oil'
         },
         {
-            title: 'ارائه گزارش از محصولات عرضه شده در بورس کالا به مشتریان'
+            title: 'Gas-oil'
         },
         {
-            title: 'ارائه گزارش از معاملات بورس کالا و اخبار بازار سرمایه به مشتریان'
+            title: 'Gasoline'
         },
         {
-            title: 'انجام معاملات تمامی کالاهای قابل معامله در بورس کالای ایران (داخلی و صادراتی)'
+            title: 'Hydrocarbon'
         },
+        {
+            title: 'Reformate'
+        },
+        {
+            title: 'Raffinate'
+        },
+        {
+            title: 'Solvent'
+        },
+        {
+            title: 'Naphtha'
+        },
+        {
+            title: 'Methanol'
+        },
+        {
+            title: 'Hexane'
+        },
+        {
+            title: 'Pentane'
+        },
+        {
+            title: 'ATK'
+        },
+        {
+            title: 'CSO'
+        },
+        {
+            title: 'Pentane'
+        },
+        {
+            title: 'Co'
+        },
+        {
+            title: 'Extract'
+        },
+        {
+            title: 'LCO'
+        },
+        {
+            title: 'Iso Feed'
+        },
+
+        {
+            title: 'Isore Cycle'
+        },
+        {
+            title: 'Atmospheric Residue'
+        },
+        {
+            title: 'Natural Gas Condensate'
+        },
+
     ]
     return (
         <div className="bg-black text-white">
             <div className="container p-10">
                 <h1>مهم‌ترین موارد قابل معامله<br />
                     در بورس کالای ایران</h1>
-                <div className="overflow-x-auto relative mt-10">
-                    <table className="w-full text-sm">
-                        <tbody>
-                            <tr className="bg-[#292929] border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    LPG
-                                </td>
-                                <td className="py-4 px-6">
-                                    Kerosene
-                                </td>
-                                <td className="py-4 px-6">
-                                    Fuel oil
-                                </td>
-                                <td className="py-4 px-6">
-                                    Gas-oil
-                                </td>
-                                <td className="py-4 px-6">
-                                    Gasoline
-                                </td>
-                            </tr>
-                            <tr className="bg-black border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    Hydrocarbon
-                                </td>
-                                <td className="py-4 px-6">
-                                    Reformate
-                                </td>
-                                <td className="py-4 px-6">
-                                    Raffinate
-                                </td>
-                                <td className="py-4 px-6">
-                                    Solvent
-                                </td>
-                                <td className="py-4 px-6">
-                                    Naphtha
-                                </td>
-                            </tr>
-                            <tr className="bg-[#292929] border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    Methanol
-                                </td>
-                                <td className="py-4 px-6">
-                                    Hexane
-                                </td>
-                                <td className="py-4 px-6">
-                                    Pentane
-                                </td>
-                                <td className="py-4 px-6">
-                                    ATK
-                                </td>
-                                <td className="py-4 px-6">
-                                    CSO
-                                </td>
-                            </tr>
-                            <tr className="bg-black border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-                                    Co
-                                </td>
-                                <td className="py-4 px-6">
-                                    Extract
-                                </td>
-                                <td className="py-4 px-6">
-                                    LCO
-                                </td>
-                                <td className="py-4 px-6">
-                                    Iso Feed
-                                </td>
-                                <td className="py-4 px-6">
-                                    Isore Cycle
-                                </td>
-                            </tr>
-                            <tr className="bg-[#292929] border-b dark:bg-gray-800 dark:border-gray-700 border border-black">
-                                <td className="py-4 px-6">
-
-                                </td>
-                                <td className="py-4 px-6">
-
-                                </td>
-                                <td className="py-4 px-6">
-
-                                </td>
-                                <td className="py-4 px-6">
-                                    Atmospheric
-                                    Residue
-                                </td>
-                                <td className="py-4 px-6">
-                                    Natural Gas
-                                    Condensate
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div className="relative mt-16">
+                    <div className="grid grid-cols-3 gap-8">
+                        {cards.map((item: any) => {
+                            return (
+                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_white] border-white p-3 flex">
+                                    <div>{item.title}</div>
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
 
             </div>

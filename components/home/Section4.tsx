@@ -26,7 +26,7 @@ export default function Section4() {
                     </div>
                 </div>
                 <div className="grow h-full relative basis-1/2" >
-                    <Image src={'/photos/tesla.svg'} fill alt={'trade'} style={{ objectFit: 'cover' }} />
+                    <Image src={'/photos/tesla.jpg'} fill alt={'trade'} style={{ objectFit: 'cover' }} />
                 </div>
             </div>
         </section>
