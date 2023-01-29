@@ -43,18 +43,20 @@ export default function AppbarV2() {
                     <Link href={'/'}>
                         <Image src={'/icons/Vector.svg'} height={35} width={35} alt={'tavana'} />
                     </Link>
-                    {
-                        navigation.map((menu: any) => {
-                            return (
-                                <div key={menu.title} className={'flex items-center min-w-fit'} onMouseEnter={() => menu.dropdown && setOpen(true)} onMouseLeave={() => menu.dropdown && setOpen(false)}>
-                                    {menu.title}
-                                    <span>
-                                        {menu.dropdown && <ChevronDownIcon className="h-4 w-4" />}
-                                    </span>
-                                </div>
-                            )
-                        })
-                    }
+                    <div className="space-x-10 space-x-reverse hidden sm:flex">
+                        {
+                            navigation.map((menu: any) => {
+                                return (
+                                    <div key={menu.title} className={'flex items-center min-w-fit'} onMouseEnter={() => menu.dropdown && setOpen(true)} onMouseLeave={() => menu.dropdown && setOpen(false)}>
+                                        {menu.title}
+                                        <span>
+                                            {menu.dropdown && <ChevronDownIcon className="h-4 w-4" />}
+                                        </span>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
                 <button className="mr-auto bg-transparent min-w-fit">
                     ثبت‌ نام

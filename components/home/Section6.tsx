@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Section6() {
     return (
         <section className="linear">
-            <div className='container pb-0 pt-16 flex h-full'>
+            <div className='container sm:pb-0 pb-16 pt-16 flex sm:flex-row flex-col h-full'>
                 <div className='grow flex flex-col basis-1/2'>
                     <h1>پیشتاز در<br />
                         معاملات بورس انرژی</h1>

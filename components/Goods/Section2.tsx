@@ -28,10 +28,10 @@ export default function Section2() {
         <div className="bg-mustard py-20">
             <div className="container p-10">
                 <h1 className='mb-20'>خدمات توانا در بورس کالا</h1>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="sm:grid sm:grid-cols-3 gap-3">
                     {cards.map((item: any) => {
                         return (
-                            <div key={item.title} className="border-4 border-black p-10 text-black flex">
+                            <div key={item.title} className="border-4 border-black p-10 text-black flex w-full mb-4 sm:mb-0">
                                 <ChevronLeftIcon className='h-5 w-5 ml-5' />
                                 <div>{item.title}</div>
                             </div>

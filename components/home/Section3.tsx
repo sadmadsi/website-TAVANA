@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 export default function Section3() {
     return (
-        <section className="bg-milk">
-            <div className="container relative py-32 flex flex-col h-full">
+        <div className="bg-milk">
+            <div className="container relative py-16 flex flex-col h-full">
                 <Image src={'/icons/DigitalTransformation.svg'} fill alt={'DigitalTransformation'} />
                 <h1>همگام<br />
                     با روندهای جهانی</h1>
@@ -18,6 +18,6 @@ export default function Section3() {
                     </span>
                 </button>
             </div>
-        </section>
+        </div>
     )
 }

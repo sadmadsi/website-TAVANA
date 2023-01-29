@@ -1,7 +1,8 @@
 import Image from "next/image";
 import {
     ChevronDownIcon,
-    ChevronLeftIcon
+    ChevronLeftIcon,
+    Bars3Icon
 } from '@heroicons/react/24/outline'
 import { useState } from "react";
 import useScrollDirection from '../../hooks/useScrollDirection'
@@ -9,6 +10,7 @@ import _ from 'lodash'
 
 export default function Appbar() {
     const [open, setOpen] = useState(false)
+    const [openMob, setOpenMob] = useState(false)
     const scrollDir = useScrollDirection();
 
     const navigation = [
@@ -40,12 +42,15 @@ export default function Appbar() {
 
     return (
         <div className="fixed top-0 w-full text-white z-10">
-            <div className={`flex bg-black transition-all ${scrollDir === 'down' ? 'py-2' : 'py-7'}`}>
+            <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-2' : 'py-7'}`}>
+                <button className="absolute sm:hidden block right-5" onClick={() => setOpen(!open)}>
+                    <Bars3Icon className="h-6 w-6 text-white" />
+                </button>
                 <div className="mx-auto">
                     {scrollDir === 'down' ? <Image src={'/icons/Vector.svg'} height={50} width={50} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} /> : <Image src={'/icons/tavana_logo.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />}
                 </div>
             </div>
-            <div className={`relative flex justify-center space-x-7 overflow-hidden bg-black/30 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-10'} ${open ? 'backdrop-blur-md' : 'backdrop-blur-sm'}`}>
+            <div className={`relative sm:flex hidden justify-center space-x-7 overflow-hidden bg-black/30 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-10'} ${open ? 'backdrop-blur-md' : 'backdrop-blur-sm'}`}>
                 {
                     navigation.map((menu: any) => {
                         return (
@@ -59,7 +64,7 @@ export default function Appbar() {
                     })
                 }
             </div>
-            <div className={`backdrop-blur-md bg-black/30 w-full transition-all flex items-center justify-around overflow-hidden ${open ? 'h-[50vh]' : 'h-0'}`} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+            <div className={`backdrop-blur-md bg-black/30 w-full transition-all flex flex-col sm:flex-row items-center justify-around overflow-hidden ${open ? 'h-[70vh]' : 'h-0'}`} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
                 <div className="space-y-4">
                     <div className="flex">
                         راهنمای استفاده از همراه‌تریدر
@@ -93,6 +98,9 @@ export default function Appbar() {
                     </p>
                 </div>
             </div>
+            {/* <div className={` transition-all backdrop-blur-md bg-black/30 ${openMob ? 'h-screen' : 'h-0'}`}>
+
+            </div> */}
         </div>
     )
 }

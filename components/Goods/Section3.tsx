@@ -34,15 +34,15 @@ export default function Section3() {
         },
     ]
     return (
-        <section className="bg-[#AC8EE8]">
+        <div className="bg-[#AC8EE8]">
             <div className="container p-10">
-                <h1>مهم‌ترین موارد قابل معامله<br />
+                <h1 className='text-center'>مهم‌ترین موارد قابل معامله<br className='sm:block hidden' />
                     در بورس کالای ایران</h1>
                 <div className="relative mt-10">
-                    <div className="grid grid-cols-3 gap-8">
+                    <div className="sm:grid sm:grid-cols-3 gap-8">
                         {cards.map((item: any) => {
                             return (
-                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-3 text-black flex">
+                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-3 text-black flex sm:mb-0 mb-4">
                                     <div>{item.title}</div>
                                 </div>
                             )
@@ -50,6 +50,6 @@ export default function Section3() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }

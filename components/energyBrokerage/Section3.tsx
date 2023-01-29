@@ -1,6 +1,7 @@
 import {
     ChevronLeftIcon,
 } from '@heroicons/react/24/outline'
+import Image from 'next/image'
 
 export default function Section3() {
 
@@ -78,23 +79,20 @@ export default function Section3() {
 
     ]
     return (
-        <div className="bg-black text-white">
-            <div className="container p-10">
+        <section className="bg-jolbaki ">
+            <div className="container flex flex-col h-full p-10">
                 <h1>مهم‌ترین موارد قابل معامله<br />
-                    در بورس کالای ایران</h1>
-                <div className="relative mt-16">
-                    <div className="grid grid-cols-3 gap-8">
-                        {cards.map((item: any) => {
-                            return (
-                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_white] border-white p-3 flex">
-                                    <div>{item.title}</div>
-                                </div>
-                            )
-                        })}
-                    </div>
+                    در بورس انرژی ایران</h1>
+                <div className="relative grow mt-16 text-center">
+                    <span className="sm:hidden block bg-[url(/photos/energy-table-mob.png)] bg-center bg-no-repeat bg-contain h-full w-full">
+                        {/* <Image src={'/photos/energy-table-mob.png'} fill alt={'table'} /> */}
+                    </span>
+                    <span className='hidden sm:block bg-[url(/photos/energy-table.png)] bg-center bg-no-repeat bg-contain h-full'>
+                        {/* <Image src={'/photos/energy-table.png'} fill alt={'table'} /> */}
+                    </span>
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }

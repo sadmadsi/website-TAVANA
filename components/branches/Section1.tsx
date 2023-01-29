@@ -52,14 +52,14 @@ export default function Section1() {
                 </div>
             </div>
             <div className="bg-transparent flex flex-col py-10">
-                <div className="flex space-x-5 space-x-reverse border-b border-b-white px-20 mb-10">
-                    <button className={`px-20 py-3 translate-y-0.5 ${location === 'Tehran' ? 'border-b-black border-white border-2' : ''}`} onClick={() => {
+                <div className="flex space-x-5 space-x-reverse border-b border-b-white sm:px-20 mb-10">
+                    <button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 translate-y-0.5 ${location === 'Tehran' ? 'border-b-black border-white border-2' : ''}`} onClick={() => {
                         setArray(Tehran)
                         setLocation('Tehran')
                     }}>
                         تهران
                     </button>
-                    <button className={`px-20 py-3 translate-y-0.5 ${location === 'Others' ? 'border-b-black border-white border-2' : ''}`} onClick={() => {
+                    <button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 translate-y-0.5 ${location === 'Others' ? 'border-b-black border-white border-2' : ''}`} onClick={() => {
                         setArray(otherCities)
                         setLocation('Others')
                     }}>
@@ -79,7 +79,7 @@ export default function Section1() {
                                             <h2>
                                                 {item.address}
                                             </h2>
-                                            <div className="flex justify-between mt-5">
+                                            <div className="flex sm:flex-row flex-col justify-between mt-5">
                                                 <div className="grow flex flex-wrap space-x-5 space-x-reverse">
                                                     {
                                                         item?.detail?.map((sub: string) => {
@@ -91,10 +91,12 @@ export default function Section1() {
                                                         })
                                                     }
                                                 </div>
-                                                <button className="border border-white flex items-center px-2">
-                                                    مشاهده روی نقشه
-                                                    <ChevronLeftIcon className='h-5 w-5' />
-                                                </button>
+                                                <a href="https://www.google.com/maps/place/Tavana+Brokerage/@35.7257914,51.4256784,15z/data=!4m5!3m4!1s0x0:0xde5f38aa74658635!8m2!3d35.7257934!4d51.4256783?sa=X&ved=2ahUKEwiA4IGN-9P8AhWt_rsIHW9ICyAQ_BJ6BAhXEAM&coh=164777&entry=tt&shorturl=1">
+                                                    <button className="border w-fit sm:mt-0 mt-5 p-2 border-white flex items-center px-2" >
+                                                        مشاهده روی نقشه
+                                                        <ChevronLeftIcon className='h-5 w-5' />
+                                                    </button>
+                                                </a>
                                             </div>
                                         </Accordion.Content>
                                     </Accordion.Panel>

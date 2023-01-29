@@ -48,13 +48,17 @@ section {
 
 .linear {
   background: linear-gradient(to bottom,
-      #F37021 70%,
+      #E0864A 70%,
       white 20%)
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@media (max-width:576px) {
+  h1 {
+    font-size: 36px !important;
+  }
+
+  h2 {
+    font-size: 16px !important;
   }
 }
 

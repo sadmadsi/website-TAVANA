@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function Section2() {
     return (
         <section className="bg-navy">
-            <div className='container flex justify-between h-full py-16'>
+            <div className='container flex sm:flex-row flex-col justify-between h-full py-16'>
                 <div className='grow flex flex-col basis-1/2'>
                     <h1>معامله<br />
                         با پلتفرم برتر بازار</h1>
