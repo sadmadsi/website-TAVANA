@@ -39,7 +39,7 @@ export default function Section3() {
                 <h1 className='sm:text-right text-center'>مهم‌ترین موارد قابل معامله<br className='sm:block hidden' />
                     در بورس کالای ایران</h1>
                 <div className="relative mt-10">
-                    <div className="sm:grid sm:grid-cols-3 gap-8">
+                    <div className="sm:grid xl:grid-cols-3 sm:grid-cols-2 gap-8">
                         {cards.map((item: any) => {
                             return (
                                 <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-3 text-black flex sm:mb-0 mb-4">

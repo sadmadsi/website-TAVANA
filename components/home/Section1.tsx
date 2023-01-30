@@ -10,9 +10,9 @@ export default function Section1() {
                         این محصول به زودی معرفی خواهد شد.
                     </span>
                 </h2>
-                <form className="flex sm:flex-row flex-col space-y-10 sm:space-x-5 sm:pt-44">
-                    <input type="text" placeholder="نام و نام خانوادگی" className="bg-transparent border-0 border-b border-white p-3 focus:shadow-none focus:ring-0" />
-                    <input type="text" placeholder="نام و نام خانوادگی" className="bg-transparent border-0 border-b border-white p-3 focus:shadow-none focus:ring-0" />
+                <form className="flex sm:flex-row flex-col space-y-10 sm:space-x-5 sm:space-x-reverse sm:pt-44">
+                    <input type="text" placeholder="نام و نام خانوادگی" className="bg-transparent border-0 border-b border-white p-3 h-fit mt-auto focus:shadow-none focus:ring-0" />
+                    <input type="text" placeholder="شماره همراه" className="bg-transparent border-0 border-b border-white p-3 focus:shadow-none focus:ring-0" />
                     <button type="submit" className="bg-white text-black p-3 px-5 transition-all hover:bg-white/70" >درخواست دمو</button>
                 </form>
             </div>

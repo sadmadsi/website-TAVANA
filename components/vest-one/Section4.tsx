@@ -30,7 +30,7 @@ export default function Section4() {
                 <h2 className="text-justify">
                     وست وان ابزار سرمایه‌گذاری با استفاده از توان و دانش متخصصان است اما می‌تواند متناسب با انتظارات و شرایط شما اختصاصی شود. ویژگی‌های سرمایه‌گذاری از طریق وست وان به شرح ذیل است:
                 </h2>
-                <div className="sm:grid sm:grid-cols-3 gap-3 mt-24">
+                <div className="sm:grid xl:grid-cols-3 sm:grid-cols-2 gap-3 mt-24">
                     {cards.map((item: any) => {
                         return (
                             <div key={item.title} className="border-4 border-white py-16 px-10 flex sm:mb-0 mb-4">
