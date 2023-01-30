@@ -1,7 +1,8 @@
 import Image from "next/image";
 import {
     ChevronDownIcon,
-    ChevronLeftIcon
+    ChevronLeftIcon,
+    Bars3Icon
 } from '@heroicons/react/24/outline'
 import { useState } from "react";
 import Link from "next/link";
@@ -40,10 +41,13 @@ export default function AppbarV2() {
         <>
             <div className="fixed flex top-0 px-10 w-full text-white bg-black py-2 items-center z-10">
                 <div className="flex space-x-10 space-x-reverse">
+                    <button className="absolute lg:hidden block right-5" onClick={() => setOpen(!open)}>
+                        <Bars3Icon className="h-6 w-6 text-white" />
+                    </button>
                     <Link href={'/'}>
                         <Image src={'/icons/Vector.svg'} height={35} width={35} alt={'tavana'} />
                     </Link>
-                    <div className="space-x-10 space-x-reverse hidden sm:flex">
+                    <div className="space-x-10 space-x-reverse hidden lg:flex">
                         {
                             navigation.map((menu: any) => {
                                 return (
@@ -62,7 +66,7 @@ export default function AppbarV2() {
                     ثبت‌ نام
                 </button>
             </div>
-            <div className={`fixed top-11 backdrop-blur-md bg-black/30 w-full transition-all flex items-center justify-around overflow-hidden z-10 text-white ${open ? 'h-[50vh]' : 'h-0'}`} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
+            <div className={`fixed top-11 backdrop-blur-md bg-black/30 w-full transition-all flex md:flex-row flex-col items-center justify-around overflow-hidden z-10 text-white ${open ? 'h-[70vh]' : 'h-0'}`} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
                 <div className="space-y-4">
                     <div className="flex">
                         راهنمای استفاده از همراه‌تریدر

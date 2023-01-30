@@ -43,14 +43,14 @@ export default function Appbar() {
     return (
         <div className="fixed top-0 w-full text-white z-10">
             <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-2' : 'py-7'}`}>
-                <button className="absolute sm:hidden block right-5" onClick={() => setOpen(!open)}>
+                <button className="absolute md:hidden block right-5" onClick={() => setOpen(!open)}>
                     <Bars3Icon className="h-6 w-6 text-white" />
                 </button>
                 <div className="mx-auto">
                     {scrollDir === 'down' ? <Image src={'/icons/Vector.svg'} height={50} width={50} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} /> : <Image src={'/icons/tavana_logo.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />}
                 </div>
             </div>
-            <div className={`relative sm:flex hidden justify-center space-x-7 overflow-hidden bg-black/30 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-10'} ${open ? 'backdrop-blur-md' : 'backdrop-blur-sm'}`}>
+            <div className={`relative md:flex hidden justify-center space-x-7 overflow-hidden bg-black/30 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-10'} ${open ? 'backdrop-blur-md' : 'backdrop-blur-sm'}`}>
                 {
                     navigation.map((menu: any) => {
                         return (
