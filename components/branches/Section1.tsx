@@ -45,9 +45,9 @@ export default function Section1() {
     const [location, setLocation] = useState('Tehran')
 
     return (
-        <div className="relative mt-11 flex flex-col text-white">
-            <div className="h-[50vh] bg-[url(/icons/Vector_faded.svg)] bg-contain bg-left bg-no-repeat bg-black flex flex-col text-white">
-                <div className="container py-10">
+        <div className="relative sm:mt-48 mt-32 flex flex-col text-white ">
+            <div className="sm:h-[30vh] h-[50vh] container bg-[url(/icons/Vector_faded.svg)] bg-contain sm:bg-left bg-bottom bg-no-repeat bg-black flex flex-col text-white">
+                <div className="py-10">
                     <h1>شعب و نمایندگی ها</h1>
                 </div>
             </div>

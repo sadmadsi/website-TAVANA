@@ -1,4 +1,4 @@
-import AppbarV2 from "../components/appbar/AppbarV2";
+import Appbar from "../components/appbar/Appbar";
 import Footer from "../components/appbar/Footer";
 import Section2 from "../components/vest-one/Section2";
 import Section1 from "../components/vest-one/Section1";
@@ -10,7 +10,7 @@ import Section5 from "../components/vest-one/Section5";
 export default function VestOne() {
     return (
         <>
-            <AppbarV2 />
+            <Appbar />
             <Section1 />
             <Section2 />
             <Section3 />

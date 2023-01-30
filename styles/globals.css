@@ -15,9 +15,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background-color: black;
 }
 
 a {
@@ -38,9 +36,11 @@ a {
   border-radius: 4px;
 }
 
+h3,
 h1 {
   font-family: 'Farhang';
 }
+
 
 section {
   height: 800px;
@@ -58,6 +58,12 @@ section {
       white 20%)
 }
 
+.linearSky {
+  background: linear-gradient(to bottom,
+      #8ECDE8 70%,
+      white 20%)
+}
+
 
 
 @media (max-width:1024px) {
@@ -66,6 +72,10 @@ section {
   }
 
   h2 {
+    font-size: 16px !important;
+  }
+
+  h3 {
     font-size: 16px !important;
   }
 }

@@ -53,7 +53,7 @@ export default function Section1() {
         }
     ]
     return (
-        <div className="relative mt-11 flex flex-col">
+        <div className="relative flex flex-col sm:mt-48 mt-24">
             <div className="h-[50vh] bg-black flex flex-col justify-end text-white">
                 <div className="container py-10">
                     <h1>حساب‌های بانکی توانا</h1>

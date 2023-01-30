@@ -29,7 +29,9 @@ export default function Section2() {
                     {cards.map((item: any) => {
                         return (
                             <div key={item.title} className="border-4 border-black p-10  text-black flex sm:mb-0 mb-4">
-                                <ChevronLeftIcon className='h-5 w-5 ml-5' />
+                                <span className='w-5 ml-5'>
+                                    <ChevronLeftIcon className='h-5 w-5 ml-5' />
+                                </span>
                                 <div>{item.title}</div>
                             </div>
                         )

@@ -1,13 +1,13 @@
 import Appbar from "../components/appbar/Appbar";
 import Footer from "../components/appbar/Footer";
-import Section1 from "../components/branches/Section1";
+import Section1 from "../components/contact/Section1";
 
-export default function Branches() {
+export default function contact() {
     return (
-        <div className="bg-black min-h-screen">
+        <>
             <Appbar />
             <Section1 />
             <Footer />
-        </div>
+        </>
     )
 }

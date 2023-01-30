@@ -97,7 +97,7 @@ export default function Footer() {
                     footerItem.map((item: any) => {
                         return (
                             <div key={item.header} className={'grow'}>
-                                <h3 className="text-white">{item.header}</h3>
+                                <h4 className="text-white">{item.header}</h4>
                                 <ul className="space-y-3 mt-5 text-[#757575]">
                                     {
                                         item.children.map((sub: any) => {

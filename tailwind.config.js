@@ -51,6 +51,7 @@ module.exports = {
       addBase({
         'h1': { fontSize: theme('fontSize.7xl'), fontWeight: theme('fontWeight.black') },
         'h2': { fontSize: theme('fontSize.xl') },
+        'h3': { fontSize: theme('fontSize.7xl'), fontWeight: theme('fontWeight.black') },
       })
     }),
     function ({ addComponents }) {

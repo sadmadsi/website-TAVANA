@@ -1,11 +1,13 @@
-import AppbarV2 from "../components/appbar/AppbarV2";
+import Appbar from "../components/appbar/Appbar";
+import Footer from "../components/appbar/Footer";
 import Section1 from "../components/bankAccounts/Section1";
 
 export default function BankAccounts() {
     return (
         <>
-            <AppbarV2 />
+            <Appbar />
             <Section1 />
+            <Footer />
         </>
     )
 }

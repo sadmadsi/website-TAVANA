@@ -1,6 +1,6 @@
 export default function Section2() {
     return (
-        <section className="container mt-20 sm:mt-0">
+        <section className="container bg-white mt-20 sm:mt-0">
             <h1>
                 وست وان،<br />
                 سرمایه‌گذاری حرفه‌ای اما ساده

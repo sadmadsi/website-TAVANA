@@ -81,7 +81,7 @@ export default function Section3() {
     return (
         <section className="bg-jolbaki ">
             <div className="container flex flex-col h-full p-10">
-                <h1>مهم‌ترین موارد قابل معامله<br />
+                <h1 className='text-center'>مهم‌ترین موارد قابل معامله<br />
                     در بورس انرژی ایران</h1>
                 <div className="relative grow mt-16 text-center">
                     <span className="sm:hidden block bg-[url(/photos/energy-table-mob.png)] bg-center bg-no-repeat bg-contain h-full w-full">
