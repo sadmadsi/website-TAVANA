@@ -49,7 +49,7 @@ module.exports = {
     require("flowbite/plugin"),
     plugin(function ({ addBase, theme }) {
       addBase({
-        'h1': { fontSize: theme('fontSize.7xl'), fontWeight: theme('fontWeight.bold') },
+        'h1': { fontSize: theme('fontSize.7xl'), fontWeight: theme('fontWeight.black') },
         'h2': { fontSize: theme('fontSize.xl') },
       })
     }),

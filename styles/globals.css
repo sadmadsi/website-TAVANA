@@ -52,6 +52,12 @@ section {
       white 20%)
 }
 
+.linearBlack {
+  background: linear-gradient(to bottom,
+      black 70%,
+      white 20%)
+}
+
 @media (max-width:576px) {
   h1 {
     font-size: 36px !important;

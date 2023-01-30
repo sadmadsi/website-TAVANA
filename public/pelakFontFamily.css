@@ -18,3 +18,13 @@
         url('./fonts/Farhang/ttf/Farhang2-Medium.ttf') format('ttf');
     /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
+
+@font-face {
+    font-family: "Farhang";
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/Farhang/woff/Farhang2-ExtraBold.woff') format('woff'),
+        /* IE6-8 */
+        url('./fonts/Farhang/ttf/Farhang2-ExtraBold.ttf') format('ttf');
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}

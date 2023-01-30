@@ -36,7 +36,7 @@ export default function Section3() {
     return (
         <div className="bg-[#AC8EE8]">
             <div className="container p-10">
-                <h1 className='text-center'>مهم‌ترین موارد قابل معامله<br className='sm:block hidden' />
+                <h1 className='sm:text-right text-center'>مهم‌ترین موارد قابل معامله<br className='sm:block hidden' />
                     در بورس کالای ایران</h1>
                 <div className="relative mt-10">
                     <div className="sm:grid sm:grid-cols-3 gap-8">

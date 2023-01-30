@@ -2,6 +2,7 @@ import {
     ChevronLeftIcon,
 } from '@heroicons/react/24/outline'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function TimeLine() {
     return (
@@ -15,12 +16,14 @@ export default function TimeLine() {
                     <h2 className='py-10'>
                         زندگی دکمه بازگشت ندارد. سرمایه‌گذاری را اثربخش  و ساده کرده‌ایم تا بهتر زندگی کنید.
                     </h2>
-                    <button className="bg-black px-2 py-3 text-white flex w-fit transition-all hover:bg-black/80">
-                        آشنایی با وست‌وان
-                        <span>
-                            <ChevronLeftIcon className='h-5 w-5' />
-                        </span>
-                    </button>
+                    <Link href={'/vestOne'}>
+                        <button className="bg-black px-2 py-3 text-white flex w-fit transition-all hover:bg-black/80">
+                            آشنایی با وست‌وان
+                            <span>
+                                <ChevronLeftIcon className='h-5 w-5' />
+                            </span>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
