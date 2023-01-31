@@ -47,7 +47,7 @@ export default function Footer() {
             ]
         },
         {
-            header: 'ارتباط با توانا',
+            header: 'دسترسی سریع',
             children: [
                 {
                     title: 'لیست شعب و نمایندگی‌ها',
@@ -88,9 +88,9 @@ export default function Footer() {
         },
     ]
     return (
-        <div className="bg-black md:flex md:flex-row py-20 px-10 gap-16">
-            <div className={'mb-16 sm:mb-0'}>
-                <Image src={'/photos/Frame.svg'} height={50} width={180} alt={'tavana'} style={{ height: 'auto', width: 'auto', margin: 'auto' }} />
+        <div className="container bg-[#111111] md:flex md:flex-row py-20 px-10 gap-16">
+            <div className={'mb-16 sm:basis-1/5 sm:mb-0'}>
+                <Image src={'/icons/footer-logo.svg'} height={200} width={250} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
             </div>
             <div className="grow md:flex md:flex-row grid grid-cols-2 gap-5">
                 {
@@ -118,6 +118,7 @@ export default function Footer() {
                 }
             </div>
             <div className="text-[#757575] basis-1/4 space-y-4 mt-16 sm:mt-0 text-center sm:text-right">
+                <h4 className="text-white">ارتباط با توانا</h4>
                 <p>
                     دفتر مرکزی: تهران، خیابان میرعماد، نبش کوچه ۳ روبروی فرمانداری، پلاک ۱۰، طبقه دوم شرقی
                 </p>

@@ -12,11 +12,22 @@
 @font-face {
     font-family: "PelakFA";
     font-style: normal;
-    font-weight: 900;
-    src: url('./fonts/Pelak-FontFamily/webfonts/eot/Pelak-ExtraBold.eot');
-    src: url('./fonts/Pelak-FontFamily/ttf/Pelak-ExtraBold.ttf') format('ttf'),
+    font-weight: 700;
+    src: url('./fonts/Pelak-FontFamily/webfonts/eot/Pelak-Bold.eot');
+    src: url('./fonts/Pelak-FontFamily/ttf/Pelak-Bold.ttf') format('ttf'),
         /* IE6-8 */
-        url('./fonts/Pelak-FontFamily/webfonts/woff/Pelak-ExtraBold.woff') format('woff');
+        url('./fonts/Pelak-FontFamily/webfonts/woff/Pelak-Bold.woff') format('woff');
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+    font-family: "PelakFA";
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/Pelak-FontFamily/webfonts/eot/Pelak-Black.eot');
+    src: url('./fonts/Pelak-FontFamily/ttf/Pelak-black.ttf') format('ttf'),
+        /* IE6-8 */
+        url('./fonts/Pelak-FontFamily/webfonts/woff/Pelak-black.woff') format('woff');
     /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 
@@ -33,9 +44,19 @@
 @font-face {
     font-family: "Farhang";
     font-style: normal;
-    font-weight: 900;
-    src: url('./fonts/Farhang/woff/Farhang2-ExtraBold.woff') format('woff'),
+    font-weight: 600;
+    src: url('./fonts/Farhang/woff/Farhang2-DemiBold.woff') format('woff'),
         /* IE6-8 */
-        url('./fonts/Farhang/ttf/Farhang2-ExtraBold.ttf') format('ttf');
+        url('./fonts/Farhang/ttf/Farhang2-DemiBold.ttf') format('ttf');
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+
+@font-face {
+    font-family: "Farhang";
+    font-style: normal;
+    font-weight: 900;
+    src: url('./fonts/Farhang/woff/Farhang2-black.woff') format('woff'),
+        /* IE6-8 */
+        url('./fonts/Farhang/ttf/Farhang2-black.ttf') format('ttf');
     /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }

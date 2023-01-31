@@ -192,15 +192,20 @@ export default function Appbar() {
     }
     return (
         <div className="fixed top-0 w-full text-white z-10">
-            <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-2' : 'py-7'}`}>
+            <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-5' : 'py-7'}`}>
                 <button className="absolute md:hidden block right-5" onClick={() => setOpenMob(!openMob)}>
                     <Bars3Icon className="h-6 w-6 text-white" />
                 </button>
-                <Link href={'/'} className="mx-auto">
-                    {scrollDir === 'down' ? <Image src={'/icons/Vector.svg'} height={50} width={50} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} /> : <Image src={'/icons/tavana_logo.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />}
+                <Link href={'/'} className="mx-auto flex flex-col">
+                    <span className="w-16 mx-auto">
+                        <Image src={'/icons/Vector.svg'} height={50} width={50} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
+                    </span>
+                    <span className={`mt-3 transition-all duration-500 ${scrollDir === 'down' ? 'opacity-0 h-0 overflow-hidden' : 'opacity-1'}`}>
+                        <Image src={'/icons/logo-type.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
+                    </span>
                 </Link>
             </div>
-            <div className={`relative md:flex hidden justify-center space-x-reverse space-x-7 overflow-hidden bg-black/80 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-10'} ${open ? 'backdrop-blur-md' : 'backdrop-blur-sm'}`}>
+            <div className={`relative md:flex hidden justify-center space-x-reverse space-x-9 overflow-hidden duration-500 bg-black/95 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-14'}`}>
                 {
                     navigation.map((menu: any) => {
                         if (menu?.link) {
@@ -211,8 +216,8 @@ export default function Appbar() {
                             return (
                                 <div key={menu.title} className={'flex items-center cursor-pointer'} onClick={() => openSub(menu)}>
                                     {menu.title}
-                                    <span>
-                                        {menu.dropdown && <ChevronDownIcon className="h-4 w-4" />}
+                                    <span className="mr-2">
+                                        {menu.dropdown && <ChevronDownIcon className="h-3 w-3" />}
                                     </span>
                                 </div>)
                         }

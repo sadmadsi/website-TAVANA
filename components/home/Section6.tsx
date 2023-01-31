@@ -25,7 +25,6 @@ export default function Section6() {
                     <Image src={'/photos/ship.jpg'} fill alt={'ship'} style={{ objectFit: 'cover' }} />
                 </div>
             </div>
-
         </section>
     )
 }

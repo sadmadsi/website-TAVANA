@@ -1,6 +1,6 @@
 export default function Section1() {
     return (
-        <div className="linearBlack text-white h-screen sm:mt-56 mt-24">
+        <div className="linearBlack text-white h-screen sm:mt-60 mt-24">
             <div className="container flex h-full sm:flex-row flex-col pt-20">
                 <div className="basis-1/2">
                     <h1>

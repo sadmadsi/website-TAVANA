@@ -1,19 +1,18 @@
 import {
     ChevronLeftIcon,
-} from '@heroicons/react/24/outline'
-import Image from 'next/image'
-import Link from 'next/link'
+} from '@heroicons/react/24/outline';
+import Link from 'next/link';
 
 export default function TimeLine() {
     return (
-        <div className="flex flex-col sm:bg-[url('/photos/banner.jpg')] bg-[url('/photos/mobile_banner.jpg')] bg-no-repeat bg-center bg-cover sm:bg-center sm:justify-end justify-center h-screen relative">
+        <div className="flex flex-col sm:bg-[url('/photos/banner.jpg')] bg-[url('/photos/mobile_banner.jpg')] bg-no-repeat bg-center bg-cover sm:bg-center sm:justify-center justify-center h-screen relative">
             {/* <Image src={'/photos/banner.jpg'} fill alt={'trade'} style={{ objectFit: 'cover' }} /> */}
-            <div className='container flex py-16 sm:mt-56 z-[5]'>
+            <div className='container flex z-[5]'>
                 <div className='w-full mr-auto sm:w-full lg:w-1/2'>
                     <h1>
-                        سرمایه‌گذاری <br /> تخصصی در بورس
+                        سرمایه‌گذاری تخصصی <br />  در بورس
                     </h1>
-                    <h2 className='py-10'>
+                    <h2 className='py-10 text-2xl'>
                         زندگی دکمه بازگشت ندارد. سرمایه‌گذاری را اثربخش  و ساده کرده‌ایم تا بهتر زندگی کنید.
                     </h2>
                     <Link href={'/vestOne'}>
