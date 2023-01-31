@@ -2,6 +2,7 @@ import Image from "next/image";
 import {
     ChevronDownIcon,
     ChevronLeftIcon,
+    ChevronRightIcon,
     Bars3Icon
 } from '@heroicons/react/24/outline'
 import { useState } from "react";
@@ -219,10 +220,13 @@ export default function Appbar() {
                     })
                 }
             </div>
-            <div className={`relative w-full flex flex-col text-center md:hidden space-y-7 overflow-hidden bg-black/80 transition-all backdrop-blur-md ${openMob ? 'h-screen py-10 ' : 'h-0'}`}>
+            <div className={`relative w-full flex flex-col text-center md:hidden space-y-7 overflow-y-auto bg-black/80 transition-all backdrop-blur-md ${openMob ? 'h-screen py-10 ' : 'h-0'}`}>
                 {component ?
                     <>
-                        <h2 onClick={() => setComponent(null)}>{menu}</h2>
+                        <h2 className="flex justify-center items-center" onClick={() => setComponent(null)}>
+                            <ChevronRightIcon className="text-white h-5 w-5" />
+                            {menu}
+                        </h2>
                         {component}
                     </> : <>
                         {
