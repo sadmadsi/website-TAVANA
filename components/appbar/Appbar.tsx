@@ -99,7 +99,7 @@ const about = () => {
                     <Image alt="signup" src={'/photos/online-branches.png'} fill />
                 </div>
                 <p className="mt-3 text-center">
-                    معرفی اجمالی توانا
+                    ثبت نام شعبه  دیجیتال
                 </p>
             </div>
         </>
