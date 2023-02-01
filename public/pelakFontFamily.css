@@ -25,9 +25,9 @@
     font-style: normal;
     font-weight: 900;
     src: url('./fonts/Pelak-FontFamily/webfonts/eot/Pelak-Black.eot');
-    src: url('./fonts/Pelak-FontFamily/ttf/Pelak-black.ttf') format('ttf'),
+    src: url('./fonts/Pelak-FontFamily/ttf/Pelak-Black.ttf') format('ttf'),
         /* IE6-8 */
-        url('./fonts/Pelak-FontFamily/webfonts/woff/Pelak-black.woff') format('woff');
+        url('./fonts/Pelak-FontFamily/webfonts/woff/Pelak-Black.woff') format('woff');
     /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
 
@@ -55,8 +55,8 @@
     font-family: "Farhang";
     font-style: normal;
     font-weight: 900;
-    src: url('./fonts/Farhang/woff/Farhang2-black.woff') format('woff'),
+    src: url('./fonts/Farhang/woff/Farhang2-Black.woff') format('woff'),
         /* IE6-8 */
-        url('./fonts/Farhang/ttf/Farhang2-black.ttf') format('ttf');
+        url('./fonts/Farhang/ttf/Farhang2-Black.ttf') format('ttf');
     /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
