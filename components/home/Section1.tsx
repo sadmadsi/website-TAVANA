@@ -1,7 +1,7 @@
 export default function Section1() {
     return (
-        <section className="bg-black text-white ">
-            <div className="container  flex flex-col justify-between h-full pt-30 pb-24">
+        <section className="bg-black text-white">
+            <div className="container flex flex-col justify-between h-full pt-30 pb-24">
                 <div className="bg-[url('/icons/orderOde.svg')] bg-no-repeat bg-contain bg-right h-[140px] flex flex-col"><h1 className="mt-auto text-6xl leading-[35px]">بهتر از همه معامله کنید</h1></div>
                 <h2 className="mt-[70px] text-justify text-2xl">
                     با کمک فناوری‌های روز و بلاکچین، محصول قدرتمندی طراحی کرده‌ایم تا معامله‌گران بورس،سطح بالاتری از معامله‌گری را<br className="sm:block hidden" />  تجربه کنند و مطابق استانداردهای جهانی، از فرصت‌های بیشتری<br className="sm:visible hidden" /> برای کسب سود در بازار سرمایه ایران بهره‌مند شوند.
