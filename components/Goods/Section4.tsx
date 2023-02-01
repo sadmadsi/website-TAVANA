@@ -17,7 +17,7 @@ export default function Section4() {
         'انجام معاملات تمامی موارد قابل معامله در بورس انرژی'
     ]
     return (
-        <div className="bg-[#D9D9D9] text-black">
+        <div className="bg-[#D9D9D9] text-black py-24">
             <div className="container py-10 flex flex-col h-full">
                 <h1>کارشناسان توانا پاسخ‌‌گوی شما هستند</h1>
                 <h2 className="mt-16">به‌منظور دریافت مشاوره و بهره‌مندی از خدمات توانا در بورس کالا فرم ذیل را تکمیل کنید</h2>
