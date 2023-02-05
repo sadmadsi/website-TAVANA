@@ -67,7 +67,7 @@ export default function AccordionComponent({ items, title }: { items: any, title
                                             <div className="sm:hidden">شماره شبه:</div>
                                             <div className="flex items-center">
                                                 {account.shebaNumber}
-                                                <span className="h-4 mr-2 cursor-pointer" onClick={() => { navigator.clipboard.writeText(account.shebaNumber) }}>
+                                                <span className="h-4 mr-2 cursor-pointer" onClick={() => { navigator.clipboard.writeText(account.shebaNumber), toast.success('با موفقیت در کلیپبورد ذخیره شد', { position: 'top-center' }) }}>
                                                     <DocumentDuplicateIcon className="h-4 w-4" />
                                                 </span>
                                             </div>
