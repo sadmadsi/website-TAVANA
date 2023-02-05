@@ -10,7 +10,7 @@ export default function Section3() {
                 <Image src={'/icons/DigitalTransformation.svg'} fill alt={'DigitalTransformation'} />
                 <h1>همگام<br />
                     با روندهای جهانی</h1>
-                <h2 className='mt-24'>شعبه دیجیتال توانا راهکاری به‌صرفه‌ و شفاف برای کسانی است که به<br /> بازاریابی و اخذ شعبه کارگزاری بورس علاقه‌مند هستند.</h2>
+                <h2 className='mt-24'>شعبه دیجیتال توانا راهکاری به‌صرفه‌ و شفاف برای کسانی است که به بازاریابی و اخذ شعبه<br />  کارگزاری بورس علاقه‌مند هستند.</h2>
                 <button className="bg-white mt-14 px-2 py-3 border border-black text-black flex w-fit transition-all hover:bg-white/20">
                     دریافت شعبه دیجیتال
                     <span>

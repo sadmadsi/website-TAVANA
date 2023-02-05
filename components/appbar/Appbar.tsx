@@ -3,7 +3,8 @@ import {
     ChevronDownIcon,
     ChevronLeftIcon,
     ChevronRightIcon,
-    Bars3Icon
+    Bars3Icon,
+    XMarkIcon
 } from '@heroicons/react/24/outline'
 import { useState } from "react";
 import useScrollDirection from '../../hooks/useScrollDirection'
@@ -245,7 +246,7 @@ export default function Appbar() {
                     })
                 }
             </div>
-            <div className={`relative w-full flex flex-col text-center md:hidden space-y-12 overflow-y-auto bg-black/95 transition-all backdrop-blur-md ${openMob ? 'h-screen pt-10 pb-52 ' : 'h-0'}`}>
+            <div className={`relative w-full flex flex-col text-center md:hidden space-y-12 overflow-y-auto bg-black/95 transition-all  ${openMob ? 'h-screen pt-10 pb-52 ' : 'h-0'}`}>
                 {component ?
                     <>
                         <h2 className="flex justify-center items-center" onClick={() => setComponent(null)}>
@@ -286,8 +287,11 @@ export default function Appbar() {
                         </div>
                     </>}
             </div>
-            <div className={`backdrop-blur-md sm:flex hidden bg-black/95 w-full transition-all flex-col sm:flex-row justify-between duration-500 overflow-hidden px-[5vw] ${open ? 'h-screen pt-40' : 'h-0'}`} onMouseLeave={() => setOpen(false)}>
+            <div className={`relative sm:flex hidden bg-black/95 w-full transition-all flex-col sm:flex-row justify-between duration-500 overflow-hidden px-[5vw] ${open ? 'h-screen pt-40' : 'h-0'}`} onMouseLeave={() => setOpen(false)}>
                 {component}
+                <button className="absolute left-10 top-10" onClick={() => setOpen(false)}>
+                    <XMarkIcon className="h-7 w-7 text-white" />
+                </button>
             </div>
         </div>
     )

@@ -57,6 +57,7 @@ module.exports = {
     }),
   },
   plugins: [
+    require("daisyui"),
     require("flowbite/plugin"),
     plugin(function ({ addBase, theme }) {
       addBase({

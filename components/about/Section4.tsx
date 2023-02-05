@@ -60,7 +60,7 @@ export default function Section4() {
     ]
     return (
         <div className="bg-white container">
-            <h1 className="mb-20 pt-12 md:pt-0">مدیران اجرایی</h1>
+            <h1 className="mb-20 pt-12 md:pt-0">مدیران اجرایی توانا</h1>
             <div className="grid lg:grid-cols-5 grid-cols-2 gap-5">
 
                 {employee.map((item: any) => {

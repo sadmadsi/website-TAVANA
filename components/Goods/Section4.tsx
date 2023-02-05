@@ -1,7 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-
+import { toast } from 'react-toastify';
 function classNames(...classes: any[]) {
     return classes.filter(Boolean).join(' ')
 }
@@ -9,6 +9,14 @@ function classNames(...classes: any[]) {
 export default function Section4() {
     const [selected, setSelected] = useState('درخواست')
 
+    const Msg = () => (
+        <div className='sm:w-[500px] w-full'>
+            درخواست مشاوره شما با موفقیت ثبت شد<br />
+            <span className='text-sm'>
+                کارشناسان ما بزودی با شما تماس می‌گیرند.
+            </span>
+        </div>
+    )
     const requests = [
         'مشاوره تخصصی و پذیرش انواع کالا و اوراق بهادار قابل معامله در بورس انرژی',
         'دریافت کد معاملاتی شرکت‌های ایرانی و خارجی',
@@ -17,16 +25,16 @@ export default function Section4() {
         'انجام معاملات تمامی موارد قابل معامله در بورس انرژی'
     ]
     return (
-        <div className="bg-[#D9D9D9] text-black py-24">
+        <div className="bg-[#D9D9D9] text-black py-24" id='section-4'>
             <div className="container py-10 flex flex-col h-full">
                 <h1>کارشناسان توانا پاسخ‌‌گوی شما هستند</h1>
                 <h2 className="mt-16">به‌منظور دریافت مشاوره و بهره‌مندی از خدمات توانا در بورس کالا فرم ذیل را تکمیل کنید</h2>
                 <div className="sm:grid sm:grid-cols-3 gap-5 space-y-5 mt-32 mb-20">
-                    <input className="bg-transparent border-0 border-b border-black py-5 focus:ring-0 w-full" type="text" placeholder="نام و نام خانوادگی" />
-                    <input className="bg-transparent border-0 border-b border-black py-5 focus:ring-0 w-full" type="text" placeholder="نام شرکت" />
-                    <input className="bg-transparent border-0 border-b border-black py-5 focus:ring-0 w-full" type="text" placeholder="شماره تماس" />
+                    <input className="bg-transparent border-0 border-b border-black py-3 focus:ring-0 w-full" type="text" placeholder="نام و نام خانوادگی*" />
+                    <input className="bg-transparent border-0 border-b border-black py-3 focus:ring-0 w-full" type="text" placeholder="نام شرکت" />
+                    <input className="bg-transparent border-0 border-b border-black py-3 focus:ring-0 w-full" type="text" placeholder="شماره تماس*" />
                     <Listbox value={selected} onChange={setSelected}>
-                        {({ open }) => (
+                        {({ open }: { open: any }) => (
                             <>
                                 <div className="relative mt-1">
                                     <Listbox.Button className="relative bg-transparent border-0 border-b border-black py-5 focus:ring-0 w-full">
@@ -49,15 +57,15 @@ export default function Section4() {
                                             {requests.map((item) => (
                                                 <Listbox.Option
                                                     key={item}
-                                                    className={({ active }) =>
+                                                    className={({ active }: { active: any }) =>
                                                         classNames(
-                                                            active ? 'text-white bg-indigo-600' : 'text-gray-900',
-                                                            'relative cursor-default select-none py-2 pl-3 pr-9'
+                                                            active ? ' bg-gray-300' : 'text-gray-900',
+                                                            'relative cursor-pointer select-none py-2 pl-3 pr-9'
                                                         )
                                                     }
                                                     value={item}
                                                 >
-                                                    {({ selected, active }) => (
+                                                    {({ selected, active }: { selected: any, active: any }) => (
                                                         <>
                                                             <div className="flex items-center">
                                                                 <span
@@ -89,7 +97,7 @@ export default function Section4() {
                     </Listbox>
                     <input className="bg-transparent border-0 border-b border-black py-5 focus:ring-0 w-full" type="text" placeholder="توضیحات" />
                 </div>
-                <button className="bg-black w-fit text-white p-3 mt-5">
+                <button className="bg-black w-fit text-white p-3 mt-5" onClick={() => toast.success(<Msg />, { delay: 2000 })}>
                     درخواست مشاوره
                 </button>
             </div>

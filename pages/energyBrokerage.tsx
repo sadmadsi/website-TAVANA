@@ -6,6 +6,7 @@ import Section3 from "../components/energyBrokerage/Section3";
 import Section4 from "../components/Goods/Section4";
 
 export default function energyBrokerage() {
+
     return (
         <>
             <Appbar />
