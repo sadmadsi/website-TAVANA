@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: black;
   background-color: black;
 }
 
@@ -24,7 +24,7 @@ a {
   text-decoration: none;
 }
 
-.custom-scrollbar::-webkit-scrollbar {
+/* .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -35,22 +35,19 @@ a {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 4px;
-}
+} */
 
 h3,
+h2,
 h1 {
   font-family: 'Farhang';
 }
 
 
-section {
-  height: 800px;
-}
-
 .linear {
   background: linear-gradient(to bottom,
-      #E0864A 70%,
-      white 20%)
+      #B84E4E 80%,
+      #d9d9d9 20%)
 }
 
 .linearBlack {
@@ -69,7 +66,7 @@ section {
 
 @media (max-width:1024px) {
   h1 {
-    font-size: 36px !important;
+    font-size: 32px !important;
   }
 
   h2 {
@@ -84,3 +81,42 @@ section {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  p {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 38px;
+  }
+
+  h1 {
+    font-size: 62px;
+    line-height: 70px;
+  }
+
+  h2 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 70px;
+  }
+
+  .footer-li {
+    font-family: 'Farhang';
+    color: #757575;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+
+  .footer-header {
+    font-family: 'Farhang';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff;
+  }
+
+  .appbar-item {
+    @apply flex !text-[22px] !leading-[52px] font-[800] font-[farhang] w-fit md:w-full sm:mx-0 mx-auto items-center md:text-2xl text-[#ffffff73] tracking-[1px] hover:text-white transition-all;
+  }
+}

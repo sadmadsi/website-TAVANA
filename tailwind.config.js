@@ -53,7 +53,10 @@ module.exports = {
       navy: '#6CC7C1',
       milk: '#EAEAEA',
       mustard: '#EDCA44',
-      jolbaki: '#9FB54A'
+      jolbaki: '#9FB54A',
+      primarytavana:'#8a4f9e',
+      secondaryTavana:'#f4bd30',
+      tertiaryTavana:'#B84E4E'
     }),
   },
   plugins: [

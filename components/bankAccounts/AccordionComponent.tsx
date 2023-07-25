@@ -81,6 +81,5 @@ export default function AccordionComponent({ items, title }: { items: any, title
 
             </div>
         </div>
-
     )
 }
