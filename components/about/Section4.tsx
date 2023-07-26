@@ -59,15 +59,15 @@ export default function Section4() {
         }
     ]
     return (
-        <div className="bg-white container">
-            <h1 className="mb-20 pt-12 md:pt-0">مدیران اجرایی توانا</h1>
+        <div className="bg-white container sm:pt-[120px] pt-20">
+            <h2 className="sm:mb-[75px] !mb-2">مدیران اجرایی توانا</h2>
             <div className="grid lg:grid-cols-5 grid-cols-2 gap-5">
-
                 {employee.map((item: any) => {
                     return (
-                        <div key={item.name} className={`sm:min-h-[370px] min-h-[200px] justify-end flex flex-col bg-contain bg-no-repeat bg-top`} style={{ backgroundImage: `url(/employee/${item.photo})` }}>
-                            <h3 className="my-2 sm:text-xl text-black">{item.name}</h3>
-                            <p className="text-[#6a6a6a] text-xs">{item.position}</p>
+                        <div key={item.name} className={`sm:py-[25px] py-[12px] px-[10px]`} >
+                            <img src={`/employee/${item.photo}`} height={'289px'} width={'330px'} alt="manager" />
+                            <div className="manager-name">{item.name}</div>
+                            <div className="manager-position">{item.position}</div>
                         </div>
                     )
                 })}

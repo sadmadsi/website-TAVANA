@@ -7,12 +7,12 @@ import Link from 'next/link'
 export default function Section2() {
     return (
         <section className="bg-primarytavana">
-            <div className='container flex sm:flex-row flex-col justify-between h-full py-[5vw]'>
+            <div className='container flex lg:flex-row flex-col justify-between h-full py-[5vw]'>
                 <div className='grow flex flex-col basis-1/2'>
                     <h2>معامله<br />
                         با پلتفرم برتر بازار</h2>
                     <p className='mt-20 mb-10'>سامانه آنلاین پلاس را بر بستر اپلیکیشن موبایل <br /> و‌ نسخه تحت وب به شما ارائه می‌دهیم.</p>
-                    <Link href={'/send-otp'} className={'w-fit'}>
+                    <Link href={'/send-otp'} className={'w-fit lg:mb-0 mb-8'}>
                         <Button>
                             ثبت‌ نام آنلاین
                             و معامله سهام

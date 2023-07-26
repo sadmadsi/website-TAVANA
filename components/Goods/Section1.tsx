@@ -1,3 +1,5 @@
+import { Button } from "../button";
+
 export default function Section1() {
     const handleClickScroll = () => {
         const element = document.getElementById('section-4');
@@ -7,20 +9,24 @@ export default function Section1() {
         }
     };
     return (
-        <section className="flex flex-col sm:flex-row sm:h-screen container linearBlack text-white mt-56">
-            <div className="sm:basis-1/2 mb-16 sm:mb-0">
-                <h1>
-                    از مشـاوره تا معامله<br />
-                    در بورس کالا
-                </h1>
-                <h2>
-                    قدم به قدم همراهتان هستیم.
-                </h2>
-                <button className="bg-white text-black p-3 mt-12" onClick={handleClickScroll}>
-                    درخواست مشاوره
-                </button>
+        <section className="linearBlack text-white mt-[118px] pt-[190px]">
+            <div className="container flex flex-col lg:flex-row ">
+                <div className="sm:basis-1/2 mb-16 sm:mb-0">
+                    <h1>
+                        از مشـاوره تا معامله<br />
+                        در بورس کالا
+                    </h1>
+                    <h2>
+                        قدم به قدم همراهتان هستیم.
+                    </h2>
+                    <Button className="mt-12 mb-8 lg:mb-0" isSecondary onClick={handleClickScroll}>
+                        درخواست مشاوره
+                    </Button>
+                </div>
+                <div className="basis-1/2">
+                    <img src="/photos/kala.jpg" height={'950px'} width={'864px'} alt="kala" />
+                </div>
             </div>
-            <div className="bg-[url(/photos/kala.jpg)] bg-cover bg-no-repeat h-full basis-1/2" />
         </section>
     )
 }

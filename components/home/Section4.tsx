@@ -7,7 +7,7 @@ import { Button } from '../button'
 export default function Section4() {
     return (
         <section className="bg-secondaryTavana">
-            <div className='container py-[5vw] flex sm:flex-row flex-col h-full'>
+            <div className='container py-[5vw] flex lg:flex-row flex-col h-full'>
                 <div className='grow flex flex-col basis-1/2 ml-5'>
                     <h2>خرید خودرو <br /> در بورس کالا</h2>
                     <p className='text-justify mt-24 mb-10'>به‌صورت غیرحضوری کد معاملاتی فیزیکی بورس کالا را در کارگزاری توانا دریافت و <br className="sm:block hidden" />بدون قرعه‌کشی و پس از انتخاب قیمت، خودروی مدنظرتان را خریداری کنید.</p>

@@ -23,16 +23,16 @@ export default function Section2() {
     ]
     return (
         <div className="bg-white">
-            <div className="container p-10">
-                <h1 className='mb-20'>خدمات توانا در بورس انرژی</h1>
-                <div className="sm:grid xl:grid-cols-3 sm:grid-cols-2 gap-3">
+            <div className="container py-20">
+                <h2 className='mb-20'>خدمات توانا در بورس انرژی</h2>
+                <div className="sm:grid xl:grid-cols-3 lg:grid-cols-1 gap-3">
                     {cards.map((item: any) => {
                         return (
                             <div key={item.title} className="border-4 border-black px-10 py-14 text-black flex sm:mb-0 mb-4">
                                 <span className='w-5 ml-5'>
                                     <ChevronLeftIcon className='h-5 w-5 ml-5' />
                                 </span>
-                                <h2 className='h-[150px]'>{item.title}</h2>
+                                <p className='h-[150px]'>{item.title}</p>
                             </div>
                         )
                     })}

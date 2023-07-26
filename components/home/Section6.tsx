@@ -9,12 +9,12 @@ export default function Section6() {
     const router = useRouter()
     return (
         <section className="linear">
-            <div className='container sm:pb-0 py-[5vw] flex sm:flex-row flex-col h-full'>
+            <div className='container sm:pb-0 py-[5vw] flex lg:flex-row flex-col h-full'>
                 <div className='grow flex flex-col basis-1/2'>
                     <h2>پیشتاز در<br />
                         معاملات بورس انرژی</h2>
                     <p className='mt-24'>رشد سریع و همه آنچه نیاز دارید؛ پیش روی شماست</p>
-                    <Link href={'/energy'} className={'w-fit'}>
+                    <Link href={'/energy'} className={'w-fit lg:mb-0 mb-8'}>
                         <Button className="mt-12" onClick={() => router.push('/energyBrokerage')}>
                             خدمات بورس انرژی
                             <span className='mr-2'>

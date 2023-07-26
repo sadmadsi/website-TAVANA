@@ -16,26 +16,25 @@ body {
 
 body {
   color: black;
-  background-color: black;
+  overflow-y: overlay !important;
 }
-
+/* body::-webkit-scrollbar {
+  width: 0.7em;
+  background: rgba(255, 0, 0, 0);
+} */
 a {
   color: inherit;
   text-decoration: none;
 }
-
-/* .custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+/* 
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #888;
-  border-radius: 4px;
+  background: rgba(82, 82, 82, 0.651);
 } */
+
 
 h3,
 h2,
@@ -43,41 +42,53 @@ h1 {
   font-family: 'Farhang';
 }
 
-
+/* dont touch */
 .linear {
   background: linear-gradient(to bottom,
       #B84E4E 80%,
       #d9d9d9 20%)
 }
 
+/* dont touch */
 .linearBlack {
   background: linear-gradient(to bottom,
-      black 70%,
-      white 20%)
+      black 67%,
+      white 43%)
 }
 
 .linearSky {
   background: linear-gradient(to bottom,
-      #8ECDE8 70%,
-      white 20%)
+  #8a4f9e 80%,
+  #d9d9d9 20%)
 }
 
 
-
-@media (max-width:1024px) {
+@media (max-width:575px) {
   h1 {
-    font-size: 32px !important;
+    line-height: 42px !important;
+    font-size: 36px !important;
   }
 
   h2 {
-    font-size: 16px !important;
+    font-size: 32px !important;
+    line-height: 38px !important;
+    margin-bottom: 24px !important;
   }
 
   h3 {
     font-size: 16px !important;
   }
-}
 
+  p{
+    font-size: 16px !important;
+    line-height: 28px !important;
+  }
+  .linearBlack {
+    background: linear-gradient(to bottom,
+        black 85%,
+        white 15%)
+  }
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -116,7 +127,33 @@ h1 {
     color: #fff;
   }
 
+  .photos{
+    width: calc(100% - 60px);
+  }
   .appbar-item {
     @apply flex !text-[22px] !leading-[52px] font-[800] font-[farhang] w-fit md:w-full sm:mx-0 mx-auto items-center md:text-2xl text-[#ffffff73] tracking-[1px] hover:text-white transition-all;
+  }
+
+  .manager-name{
+    color: #000;
+    font-weight: 900;
+    margin-top: 16px;
+    line-height: 28px;
+    font-family: 'Farhang';
+    @apply text-[16px] sm:text-[20px] mb-0 sm:mb-[8px]
+  }
+
+  .manager-position{
+    color: #6a6a6a;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: 'Farhang';
+    @apply text-[12px] sm:text-[14px] 
+  }
+}
+
+@layer components{
+  .container{
+    @apply mx-auto sm:max-w-full w-[90vw] p-0
   }
 }

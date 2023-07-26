@@ -34,19 +34,19 @@ export default function Section3() {
         },
     ]
     return (
-        <div className="bg-[#AC8EE8]">
+        <div className="bg-primarytavana">
             <div className="container p-10">
-                <h1 className='text-center'>
+                <h2 >
                     {' مهم‌ترین موارد قابل معامله'}
                     < br className='sm:block hidden' />
                     {" " + 'در بورس کالای ایران'}
-                </h1>
-                <div className="relative mt-10 sm:w-2/3 w-full text-center mx-auto">
+                </h2>
+                <div className="relative w-full text-center mt-32">
                     <div className="sm:grid xl:grid-cols-3 sm:grid-cols-2 gap-8">
                         {cards.map((item: any) => {
                             return (
-                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-5 text-black flex sm:mb-0 mb-4">
-                                    <h2 className='text-center mx-auto text-black'>{item.title}</h2>
+                                <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-5 text-black bg-[#ac8ee8] flex sm:mb-0 mb-4">
+                                    <p className='text-center mx-auto font-bold text-black'>{item.title}</p>
                                 </div>
                             )
                         })}

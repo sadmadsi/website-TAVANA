@@ -70,18 +70,7 @@ module.exports = {
       })
     }),
     function ({ addComponents }) {
-      addComponents({
-        '.container': {
-          maxWidth: '100%',
-          '@screen sm': {
-            maxWidth: '640px',
-          },
-          '@screen md': {
-            padding: '80px',
-            maxWidth: '100%',
-          }
-        }
-      })
+      
     }
   ]
 }

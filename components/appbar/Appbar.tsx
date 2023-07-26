@@ -213,21 +213,21 @@ export default function Appbar() {
     ]
 
     return (
-        <div className="fixed top-0 w-full text-white z-10">
+        <div className="fixed top-0 w-full text-white z-[100]">
             <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-4' : 'py-4'}`}>
-                <button className="absolute md:hidden block right-5" onClick={() => setOpenMob(!openMob)}>
+                {scrollDir === 'up' ? <button className="absolute lg:hidden block right-5" onClick={() => setOpenMob(!openMob)}>
                     <Bars3Icon className="h-6 w-6 text-white" />
-                </button>
+                </button> : null}
                 <Link href={'/'} className="mx-auto flex flex-col">
-                    <span>
-                        <Image src={'/tavana/logo.svg'} height={53} width={112} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
+                    <span className="mr-auto ml-[29px]">
+                        <Image src={'/tavana/logo.svg'} height={53} width={53} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
                     </span>
-                    <span className={`mt-2 transition-all duration-1000 ${scrollDir === 'down' ? 'opacity-0 h-0' : 'opacity-1 h-[31px]'}`}>
+                    <span className={`mt-2 ml-[58px] transition-all duration-1000 ${scrollDir === 'down' ? 'opacity-0 h-0' : 'opacity-1 h-[31px]'}`}>
                         <Image src={'/tavana/tavana-name.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
                     </span>
                 </Link>
             </div>
-            <div className={`relative md:flex hidden justify-center space-x-reverse gap-10 overflow-hidden duration-500 bg-black/95 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-[62px]'}`}>
+            <div className={`relative lg:flex hidden justify-center space-x-reverse gap-10 overflow-hidden duration-200 bg-black/95 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-[62px]'}`}>
                 {
                     navigation.map((menu: any) => {
                         if (menu?.link) {
@@ -247,7 +247,7 @@ export default function Appbar() {
                     })
                 }
             </div>
-            <div className={`relative w-full flex flex-col text-center md:hidden space-y-12 overflow-y-auto bg-black/95 transition-all  ${openMob ? 'h-screen pt-10 pb-52 ' : 'h-0'}`}>
+            <div className={`relative w-full flex flex-col text-center lg:hidden space-y-12 overflow-y-auto bg-black/95 transition-all  ${openMob ? 'h-screen pt-10 pb-52 ' : 'h-0'}`}>
                 {component ?
                     <>
                         <h2 className="flex justify-center items-center" onClick={() => setComponent(null)}>
@@ -288,7 +288,7 @@ export default function Appbar() {
                         </div>
                     </>}
             </div>
-            <div className={`relative sm:flex hidden bg-black/95 w-full transition-all flex-col sm:flex-row justify-between duration-500 overflow-hidden px-[5vw] ${open ? 'h-screen pt-40' : 'h-0'}`}>
+            <div className={`relative lg:flex hidden bg-black/95 w-full transition-all flex-col lg:flex-row justify-between duration-500 overflow-hidden px-[5vw] ${open ? 'h-screen pt-40' : 'h-0'}`}>
                 {component}
                 <button className="absolute left-10 top-10" onClick={() => setOpen(false)}>
                     <XMarkIcon className="h-7 w-7 text-white" />

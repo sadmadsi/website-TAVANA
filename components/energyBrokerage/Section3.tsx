@@ -74,17 +74,15 @@ export default function Section3() {
 
     ]
     return (
-        <section className="bg-jolbaki py-10">
+        <section className="bg-secondaryTavana py-24">
             <div className="container flex flex-col h-full p-10">
-                <h1 className='text-center'>مهم‌ترین موارد قابل معامله<br />
+                <h1>مهم‌ترین موارد قابل معامله<br />
                     در بورس انرژی ایران</h1>
-                <div className="relative grow mt-16 text-center">
-                    <span className="sm:hidden block bg-[url(/photos/energy-table-mob.png)] bg-center bg-no-repeat bg-contain h-full w-full">
-                        {/* <Image src={'/photos/energy-table-mob.png'} fill alt={'table'} /> */}
-                    </span>
-                    <span className='hidden sm:block bg-[url(/photos/energy-table.png)] w-3/4 mx-auto bg-center bg-no-repeat bg-contain h-full'>
-                        {/* <Image src={'/photos/energy-table.png'} fill alt={'table'} /> */}
-                    </span>
+                <div className="relative grow mt-16 ">
+                    <img src="/photos/energy-table-mob.png" className="sm:hidden block" />
+                    {/* <Image src={'/photos/energy-table-mob.png'} fill alt={'table'} /> */}
+                    <img src="/photos/energy-table.png" className="hidden sm:block w-3/4 mx-auto" />
+                    {/* <Image src={'/photos/energy-table.png'} fill alt={'table'} /> */}
                 </div>
 
             </div>
