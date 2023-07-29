@@ -34,7 +34,7 @@ export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobi
             {mobileResposive ? <div className={twMerge("container lg:hidden flex flex-col space-y-5 " + className)}>
                 {children?.map((item, i) => {
                     return (
-                        <div className="border-2 border-black overflow-hidden animation-height  duration-200">
+                        <div className="border-2 border-black overflow-hidden animation-height  duration-200" key={i}>
                             {tabValidator(item) && (item)}
                             <div key={i} className={`animation-height duration-200 ${item.props.isActiveTab ? "max-h-[1000px]" : "max-h-0"}`}>
                                 {item.props.component}

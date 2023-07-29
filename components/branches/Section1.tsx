@@ -6,10 +6,6 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "../common/button";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
-import { Tabs } from "../common/tab/tab-container";
-import { Tab } from "../common/tab/tab";
-import { Detail } from "./detail";
-import { spawn } from "child_process";
 
 const Tehran = [
     {
@@ -280,7 +276,7 @@ export default function Section1() {
                     {
                         array.map((item: any) => {
                             return (
-                                <div className="collapse border-b-2 border-white font-[Farhang]">
+                                <div className="collapse border-b-2 border-white font-[Farhang]" key={item.title}>
                                     <input type="checkbox" className="peer w-full" />
                                     <div className="collapse-title bg-transparent flex px-2 py-7 peer-checked:hidden">
                                         <ChevronLeftIcon className={'h-7 w-7 '} />

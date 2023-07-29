@@ -9,7 +9,7 @@ export const Detail = (props: any) => {
             {
                 array.map((item: any) => {
                     return (
-                        <div className="collapse border-b-2 border-white font-[Farhang]">
+                        <div className="collapse border-b-2 border-white font-[Farhang]" key={item.title}>
                             <input type="checkbox" className="peer w-full" />
                             <div className="collapse-title bg-transparent flex px-2 py-7 peer-checked:hidden">
                                 <ChevronLeftIcon className={'h-7 w-7 '} />
