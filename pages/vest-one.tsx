@@ -1,5 +1,5 @@
-import Appbar from "../components/appbar/Appbar";
-import Footer from "../components/appbar/Footer";
+import Appbar from "../components/common/appbar/Appbar";
+import Footer from "../components/common/appbar/Footer";
 import Section2 from "../components/vest-one/Section2";
 import Section1 from "../components/vest-one/Section1";
 import Section3 from "../components/vest-one/Section3";

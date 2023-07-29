@@ -1,4 +1,4 @@
-import { Button } from "../button";
+import { Button } from "../common/button";
 
 export default function Section1() {
     const handleClickScroll = () => {

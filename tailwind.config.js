@@ -54,6 +54,8 @@ module.exports = {
       milk: '#EAEAEA',
       mustard: '#EDCA44',
       jolbaki: '#9FB54A',
+      mute:'#9a9a9a',
+      disable:'#00000078',
       primarytavana:'#8a4f9e',
       secondaryTavana:'#f4bd30',
       tertiaryTavana:'#B84E4E'

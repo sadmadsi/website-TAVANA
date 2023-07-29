@@ -1,5 +1,5 @@
-import Appbar from "../components/appbar/Appbar";
-import Footer from "../components/appbar/Footer";
+import Appbar from "../components/common/appbar/Appbar";
+import Footer from "../components/common/appbar/Footer";
 import Section1 from "../components/contact/Section1";
 
 export default function contact() {

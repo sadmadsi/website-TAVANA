@@ -4,8 +4,12 @@ import {
 } from '@heroicons/react/24/outline'
 import { useState } from "react";
 import Link from "next/link";
-import { Button } from "../button";
+import { Button } from "../common/button";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { Tabs } from "../common/tab/tab-container";
+import { Tab } from "../common/tab/tab";
+import { Detail } from "./detail";
+import { spawn } from "child_process";
 
 const Tehran = [
     {
@@ -251,21 +255,21 @@ export default function Section1() {
     const [location, setLocation] = useState('Tehran')
 
     return (
-        <div className="relative mt-[118px] pt-[120px] flex flex-col text-white">
-            <div className="sm:h-[30vh] h-[50vh] container bg-[url(/icons/Vector_faded.png)] bg-contain sm:bg-left bg-bottom bg-no-repeat bg-black flex flex-col text-white">
-                <div className="py-10">
+        <div className="relative mt-[118px] sm:pt-[120px] flex flex-col text-white">
+            <div className="h-[30vh] container bg-[url(/icons/Vector_faded.png)] bg-contain sm:bg-left bg-bottom bg-no-repeat bg-black flex flex-col text-white">
+                <div className="sm:py-10 pt-[100px]">
                     <h1>شعب و نمایندگی ها</h1>
                 </div>
             </div>
             <div className="bg-transparent flex flex-col py-10">
                 <div className="flex space-x-5 space-x-reverse border-b-2 border-b-white sm:px-20 mb-10">
-                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-0 translate-y-0.5 ${location === 'Tehran' ? 'border-b-black border-white border-2 shadow-[0_1px_0px_0px_black]' : 'bg-transparent border-transparent'}`} onClick={() => {
+                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-2 translate-y-0.5 ${location === 'Tehran' ? ' border-white border-2 border-b-black shadow-[0_1px_0px_0px_black]' : 'bg-transparent border-transparent'}`} onClick={() => {
                         setArray(Tehran)
                         setLocation('Tehran')
                     }}>
                         تهران
                     </Button>
-                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-0 translate-y-0.5 ${location === 'Others' ? 'border-b-black border-white border-2 shadow-[0_1px_0px_0px_black]' : 'bg-transparent border-transparent'}`} onClick={() => {
+                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-0 translate-y-0.5 ${location === 'Others' ? ' border-white border-2 border-b-black shadow-[0_1px_0px_0px_black]' : 'bg-transparent border-transparent'}`} onClick={() => {
                         setArray(otherCities)
                         setLocation('Others')
                     }}>
