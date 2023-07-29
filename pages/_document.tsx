@@ -6,7 +6,6 @@ class MyDocument extends Document {
         return (
             <Html dir={"rtl"}>
                 <Head>
-                    <link rel='shortcut icon' href='/favicon.ico' />
                 </Head>
                 <body className={'custom-scrollbar'}>
                     <Main />

@@ -16,7 +16,7 @@ body {
 
 body {
   color: black;
-  overflow-y: overlay !important;
+  overflow-y: auto ;
 }
 /* body::-webkit-scrollbar {
   width: 0.7em;
@@ -26,14 +26,19 @@ a {
   color: inherit;
   text-decoration: none;
 }
-/* 
+
 .custom-scrollbar::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(82, 82, 82, 0.651);
-} */
+  background: #888;
+  border-radius: 4px;
+}
 
 
 h3,
