@@ -11,6 +11,7 @@ import useScrollDirection from '../../../hooks/useScrollDirection'
 import _ from 'lodash'
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
+import { Button } from "../button";
 
 const moamelat = () => {
     return (
@@ -106,37 +107,38 @@ const about = () => {
 const buyBourse = () => {
     return (
         <>
-            <div className="relative md:h-[50vh] grow md:basis-2/3 basis-1/3 md:w-3/5">
+            <Link href={'/buy-car'} className="relative md:h-[50vh] grow md:basis-2/3 basis-1/3 md:w-3/5">
                 <div className="m-auto h-[200px] bg-[url(/photos/car-news.png)] md:h-full bg-contain bg-no-repeat bg-center md:mx-0 mx-5">
                     {/* <Image alt="signup" src={'/photos/car-news.png'} fill /> */}
                 </div>
                 <p className="absolute w-full text-center -bottom-3">
                     راهنمای خرید خودرو در بورس و اخبار روز
                 </p>
-            </div>
+            </Link>
             <div className="md:basis-1/3 grow md:flex md:flex-col space-y-8 md:h-[50vh] md:mr-10">
-                <div className="relative grow h-[200px]">
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]">
                     <div className="m-auto bg-[url(/photos/sign-in-for-car.png)] h-full bg-cover bg-no-repeat bg-center md:mx-0 mx-5">
                         {/* <Image alt="signup" src={'/photos/sign-in-for-car.png'} fill /> */}
                     </div>
                     <p className="absolute w-full text-center -bottom-3">
                         ثبت نام در سامانه خرید خودرو در بورس
                     </p>
-                </div>
-                <div className="relative grow h-[200px]">
+                </Link>
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]">
                     <div className="m-auto bg-[url(/photos/enter-car-platform.png)] h-full bg-cover bg-no-repeat bg-center md:mx-0 mx-5">
                         {/* <Image alt="signup" src={'/photos/enter-car-platform.png'} fill /> */}
                     </div>
                     <p className="absolute w-full text-center -bottom-3">
                         ورود به سامانه خرید خودرو در بورس
                     </p>
-                </div>
+                </Link>
             </div>
         </>
     )
 }
 
-export default function Appbar() {
+export default function Appbar(props: any) {
+    const { buyCar } = props
     const [open, setOpen] = useState(false)
     const [openMob, setOpenMob] = useState(false)
     const [menu, setMenu] = useState('')
@@ -146,7 +148,7 @@ export default function Appbar() {
     const navigation = [
         {
             title: 'سرمایه‌گذاری',
-            link: '/vestOne',
+            link: '/vest-one',
             dropdown: false
         },
         {
@@ -159,12 +161,12 @@ export default function Appbar() {
         },
         {
             title: 'بورس کالا',
-            link: '/goodsBrokerage',
+            link: '/kala',
             dropdown: false
         },
         {
             title: 'بورس انرژی',
-            link: '/energyBrokerage',
+            link: '/energy',
             dropdown: false
         },
         {
@@ -214,6 +216,13 @@ export default function Appbar() {
 
     ]
 
+    const handleClickScroll = (id: string) => {
+        const element = document.getElementById(id);
+        if (element) {
+            // 👇 Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth', block: "end", });
+        }
+    };
     return (
         <div className="fixed top-0 w-full text-white z-[100]">
             <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-4' : 'py-4'}`}>
@@ -228,10 +237,10 @@ export default function Appbar() {
                     <Bars3Icon className="h-6 w-6 text-white" />
                 </button> : null}
                 <Link href={'/'} className="mx-auto flex flex-col">
-                    <span className="mr-auto ml-[29px]">
+                    <span className="mr-auto translate-x-0 md:-translate-x-[29px]">
                         <Image src={'/tavana/logo.svg'} height={53} width={53} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
                     </span>
-                    <span className={`mt-2 ml-[58px] transition-all duration-1000 ${scrollDir === 'down' ? 'opacity-0 h-0' : 'opacity-1 h-[31px]'}`}>
+                    <span className={`mt-2 md:ml-0 ml-[29px] transition-all duration-1000 ${scrollDir === 'down' ? 'opacity-0 h-0' : 'opacity-1 h-[31px]'}`}>
                         <Image src={'/tavana/tavana-name.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
                     </span>
                 </Link>
@@ -257,7 +266,6 @@ export default function Appbar() {
                 }
             </div>
             <div className={`relative w-full bg-black/95 transition-all`}>
-
                 <div className={`flex flex-col text-center lg:hidden space-y-12 overflow-y-auto ${openMob ? 'h-screen pt-10 pb-52 ' : 'h-0'}`}>
                     {component ?
                         <>
@@ -299,15 +307,30 @@ export default function Appbar() {
                             </div>
                         </>
                     }
-                </div>
 
+                </div>
             </div>
+
             <div className={`relative lg:flex hidden bg-black/95 w-full transition-all flex-col lg:flex-row justify-between duration-500 overflow-hidden px-[5vw] ${open ? 'h-screen pt-40' : 'h-0'}`}>
                 {component}
                 <button className="absolute left-10 top-10" onClick={() => setOpen(false)}>
                     <XMarkIcon className="h-7 w-7 text-white" />
                 </button>
             </div>
+            {buyCar ? <div className={`relative justify-center lg:gap-40 gap-8 py-4 items-center flex overflow-hidden  bg-black `}>
+                <div className="hidden lg:block font-[900] font-[farhang] text-[16px]">
+                    خرید خودرو در بورس
+                </div>
+                <div className="flex items-center space-x-5 space-x-reverse font-[farhang] text-[16px] font-[600]">
+                    <div className="cursor-pointer" onClick={() => handleClickScroll('arze')}>برنامه عرضه </div>
+                    <div className="cursor-pointer hidden lg:block" onClick={() => handleClickScroll('compare')}>مقایسه قیمت</div>
+                    <div className="cursor-pointer" onClick={() => handleClickScroll('rahnama')}>راهنما</div>
+                </div>
+                <Button className={'border-white leading-8 hover:bg-white hover:text-black'}>
+                    دریافت کد بورس کالا
+                    <ChevronLeftIcon className="h-5 w-5 mr-5" />
+                </Button>
+            </div> : null}
         </div>
     )
 }
