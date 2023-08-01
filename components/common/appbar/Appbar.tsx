@@ -2,15 +2,13 @@ import Image from "next/image";
 import {
     ChevronDownIcon,
     ChevronLeftIcon,
-    ChevronRightIcon,
     Bars3Icon,
     XMarkIcon
 } from '@heroicons/react/24/outline'
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useScrollDirection from '../../../hooks/useScrollDirection'
 import _ from 'lodash'
 import Link from "next/link";
-import { Transition } from "@headlessui/react";
 import { Button } from "../button";
 
 const moamelat = () => {

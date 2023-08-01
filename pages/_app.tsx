@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>خدمات مالی توانا - سرمایه گذاری کارگزاری بورس</title>
+        <title>گروه مالی توانا - سرمایه گذاری کارگزاری بورس</title>
       </Head>
       <ToastContainer
         ref={toast}
