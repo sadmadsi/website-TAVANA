@@ -20,12 +20,12 @@ export const Select = (props: SelectProps) => {
         <Listbox value={selected} onChange={onChange}>
             {({ open, value }: { open: any, value: any }) => (
                 <>
-                    <div className="relative w-full min-h-[37px]">
+                    <div className="relative w-full ">
                         <div className={`ml-4 text-[#9a9a9a] font-bold absolute text-sm  
                         duration-300 ${open || value ? '-translate-y-6' : 'translate-y-2'}`}>
                             {label}
                         </div>
-                        <Listbox.Button className={twMerge(`relative h-full text-[16px] p-0 leading-6 py-2 bg-transparent border-0 border-b ${open || value ? 'border-black border-b-2' : 'border-[#9a9a9a]'} focus:ring-0 w-full`, className)}>
+                        <Listbox.Button className={twMerge(`relative min-h-[37px] h-full text-[16px] p-0 leading-6 py-2 bg-transparent border-0 border-b ${open || value ? 'border-black border-b-2' : 'border-[#9a9a9a]'} focus:ring-0 w-full`, className)}>
                             <span className="flex items-center">
                                 <span className="ml-3 block truncate">{selected}</span>
                             </span>

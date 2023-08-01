@@ -6,7 +6,7 @@ import { Button } from '../common/button';
 
 export default function TimeLine() {
     return (
-        <div className="flex flex-col sm:bg-[url('/photos/banner.jpg')] bg-[url('/photos/banner.jpg')] bg-no-repeat bg-right bg-cover sm:bg-center sm:justify-center justify-center h-[794px] sm:mt-[118px] pt-[120px] relative">
+        <div className="flex flex-col sm:bg-[url('/photos/hero-background.png')] bg-[url('/photos/hero-background.png')] bg-no-repeat bg-right bg-cover sm:bg-center sm:justify-center justify-center h-[794px] sm:mt-[118px] pt-[120px] relative">
             {/* <Image src={'/photos/banner.jpg'} fill alt={'trade'} style={{ objectFit: 'cover' }} /> */}
             <div className='container flex z-[5]'>
                 <div className='w-full text-right mr-auto sm:w-full lg:w-1/2'>

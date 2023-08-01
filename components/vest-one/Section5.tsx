@@ -44,7 +44,7 @@ export default function Section5() {
                     قدم به قدم همراهتان هستیم
                 </h2>
                 <p className="mt-16">برای شروع و درخواست مشاوره فرم ذیل را تکمیل کنید</p>
-                <div className="lg:grid sm:grid-cols-3 gap-8 mt-32 mb-20 space-y-5 lg:space-y-0">
+                <div className="lg:grid sm:grid-cols-3 gap-8 mt-32 mb-20 space-y-10 lg:space-y-0">
                     <Input label='نام و نام خانوادگی' onChange={(e: any) => setName(e.target.value)} value={name} />
                     <Input label='شماره تماس*' onChange={(e: any) => setMobile(e.target.value)} value={mobile} />
                     <Select label='میزان سرمایه شما برای تشکیل سبد وست وان چقدر است؟' onChange={(e: any) => setAsset(e)} options={assets} selected={asset} />
