@@ -9,6 +9,7 @@ import { Tab1 } from "./tab1";
 import { Tab2 } from "./tab2";
 import { Tab4 } from "./tab4";
 import { Tab5 } from "./tab5";
+import Link from "next/link";
 
 export const PurchaseGuide = () => {
     const [activeTab, setActiveTab] = useState(1);
@@ -23,18 +24,23 @@ export const PurchaseGuide = () => {
                         خرید خودرو در بورس کالا</h2>
                     <p>به‌طور خلاصه برای خرید خودرو در بورس کالا ضروری است که کد معاملاتی بورس کالا را دریافت کنید. این کد بورسی با کد بورسی لازم برای خریدوفروش سهام یا معاملات آتی متفاوت است. اما اگر در سجام احراز هویت شده باشید در کم‌تر از ۵ دقیقه می‌توانید کد معاملاتی بورس کالا را دریافت کنید.</p>
                     <div className="flex items-center space-x-5 space-x-reverse mt-10 ">
-                        <Button>
-                            دریافت کد بورس کالا
-                            <ChevronLeftIcon className="h-5 w-5 md:mr-5" />
-                        </Button>
-                        <Button className={'bg-transparent !mt-0'} isSecondary>
-                            ثبت نام سجام
-                            <ChevronLeftIcon className="h-5 w-5 md:mr-5" />
-                        </Button>
+                        <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'}>
+                            <Button>
+                                دریافت کد بورس کالا
+                                <ChevronLeftIcon className="h-5 w-5 md:mr-5" />
+                            </Button>
+                        </Link>
+                        <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'}>
+                            <Button className={'bg-transparent !mt-0'} isSecondary>
+                                ثبت نام سجام
+                                <ChevronLeftIcon className="h-5 w-5 md:mr-5" />
+                            </Button>
+                        </Link>
                     </div>
-                    <p className="md:my-24 my-12">مراحل خرید خودرو در بورس کالا به شرح زیر است.</p>
+                    <p className="md:my-24 my-12" >مراحل خرید خودرو در بورس کالا به شرح زیر است.</p>
                 </div>
-                <Tabs>
+                <div id={'rahnama'}></div>
+                <Tabs >
                     <Tab className={twMerge('md:!px-12 md:py-8', activeTab === 1 ? 'bg-white border-black md:border-2 !border-b-0 shadow-[0_1px_0px_0px_white]' : '')}
                         key={'item1'}
                         component={<Tab1 />}
@@ -91,7 +97,6 @@ export const PurchaseGuide = () => {
                         isActiveTab={activeTab === 5}
                         setActiveTab={setActiveTab} />
                 </Tabs>
-                <div id={'rahnama'}></div>
             </div>
         </>
     )

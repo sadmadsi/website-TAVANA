@@ -67,9 +67,55 @@ h1 {
   #d9d9d9 20%)
 }
 
-.animation-height{
-  transition: max-height 1s;
+.sentence > span {
+  display: inline-block;
 }
+/*Wrapper*/
+.wrapper{
+    position: relative;
+    width: 100%;
+}
+
+/*Vertical Sliding*/
+.slidingVertical{
+  display: inline-block;
+  width:8em;
+  height:90px;
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+}
+.slidingVertical span  h1{
+     animation: topToBottom 6s ease-in-out infinite 0s;
+    -ms-animation: topToBottom 6s ease-in-out infinite 0s;
+    -webkit-animation: topToBottom 6s ease-in-out infinite 0s;
+     visibility: hidden;
+     bottom: 80px;
+     height: 80px;
+     padding: 5px 0;
+    position: absolute;
+}
+
+.slidingVertical span h1:nth-child(2){
+  animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+}
+.slidingVertical span h1:nth-child(3){
+  animation-delay: 4s;
+  -ms-animation-delay: 4s;
+  -webkit-animation-delay: 4s;
+}
+
+/*topToBottom Animation*/
+@keyframes topToBottom{
+    42% {visibility: visible;transform: translateY(0);}
+    50% { visibility: visible;transform: translateY(80px); }
+    75% { visibility: visible;transform: translateY(80px); }
+    82% {  visibility: hidden;transform: translateY(160px); }
+    100% {  visibility: hidden;transform: translateY(0px); }
+}
+
 
 @media (max-width:575px) {
   h1 {

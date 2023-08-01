@@ -143,6 +143,7 @@ export default function Appbar(props: any) {
     const [openMob, setOpenMob] = useState(false)
     const [menu, setMenu] = useState('')
     const [component, setComponent] = useState<any>(null)
+    const [expand, setExpand] = useState<any>(true)
     const scrollDir = useScrollDirection();
 
     const navigation = [
@@ -223,10 +224,28 @@ export default function Appbar(props: any) {
             element.scrollIntoView({ behavior: 'smooth', block: "end", });
         }
     };
+
+    useEffect(() => {
+        if (buyCar) {
+            if (scrollDir === 'down') {
+                setExpand(false)
+            } else {
+                window.onscroll = () =>
+                    window.pageYOffset === 0 && setExpand(true)
+            }
+        } else {
+            if (scrollDir === 'up') {
+                setExpand(true)
+            } else {
+                setExpand(false)
+            }
+        }
+    }, [scrollDir])
+
     return (
         <div className="fixed top-0 w-full text-white z-[100]">
-            <div className={`relative flex items-center bg-black transition-all ${scrollDir === 'down' ? 'py-4' : 'py-4'}`}>
-                {scrollDir === 'up' ? <button className="absolute lg:hidden block right-5" onClick={() => {
+            <div className={`relative flex items-center bg-black transition-all ${!expand ? 'py-4' : 'py-4'}`}>
+                {expand ? <button className="absolute lg:hidden block right-5" onClick={() => {
                     setOpenMob(!openMob)
                     if (openMob) {
                         document.getElementsByTagName('html')[0].className = '';
@@ -240,12 +259,12 @@ export default function Appbar(props: any) {
                     <span className="mr-auto translate-x-0 md:-translate-x-[29px]">
                         <Image src={'/tavana/logo.svg'} height={53} width={53} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
                     </span>
-                    <span className={`mt-2 md:ml-0 ml-[29px] transition-all duration-1000 ${scrollDir === 'down' ? 'opacity-0 h-0' : 'opacity-1 h-[31px]'}`}>
+                    <span className={`mt-2 md:ml-0 ml-[29px] transition-all duration-1000 ${!expand ? 'opacity-0 h-0' : 'opacity-1 h-[31px]'}`}>
                         <Image src={'/tavana/tavana-name.svg'} height={100} width={100} alt={'tavana'} style={{ height: 'auto', width: 'auto' }} />
                     </span>
                 </Link>
             </div>
-            <div className={`relative lg:flex hidden justify-center space-x-reverse gap-10 overflow-hidden duration-200 bg-black/95 transition-all ${scrollDir === 'down' ? 'h-0' : 'h-[62px]'}`}>
+            <div className={`relative lg:flex hidden justify-center space-x-reverse gap-10 overflow-hidden duration-200 bg-black/95 transition-all ${!expand ? 'h-0' : 'h-[62px]'}`}>
                 {
                     navigation.map((menu: any) => {
                         if (menu?.link) {
@@ -317,7 +336,7 @@ export default function Appbar(props: any) {
                     <XMarkIcon className="h-7 w-7 text-white" />
                 </button>
             </div>
-            {buyCar ? <div className={`relative justify-center lg:gap-40 gap-8 py-4 items-center flex overflow-hidden  bg-black `}>
+            {buyCar ? <div className={`relative justify-center lg:gap-40 gap-8 py-4 items-center flex overflow-hidden  bg-black `} suppressHydrationWarning>
                 <div className="hidden lg:block font-[900] font-[farhang] text-[16px]">
                     خرید خودرو در بورس
                 </div>
@@ -326,10 +345,12 @@ export default function Appbar(props: any) {
                     <div className="cursor-pointer hidden lg:block" onClick={() => handleClickScroll('compare')}>مقایسه قیمت</div>
                     <div className="cursor-pointer" onClick={() => handleClickScroll('rahnama')}>راهنما</div>
                 </div>
-                <Button className={'border-white leading-8 hover:bg-white hover:text-black'}>
-                    دریافت کد بورس کالا
-                    <ChevronLeftIcon className="h-5 w-5 mr-5" />
-                </Button>
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'}>
+                    <Button className={'border-white leading-8 hover:bg-white hover:text-black'}>
+                        دریافت کد بورس کالا
+                        <ChevronLeftIcon className="h-5 w-5 mr-5" />
+                    </Button>
+                </Link>
             </div> : null}
         </div>
     )

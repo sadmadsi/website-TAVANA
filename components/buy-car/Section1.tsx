@@ -6,13 +6,25 @@ export const Section1 = () => {
         <div className="linearBlack mt-[118px] lg:pt-[250px] pt-[120px]">
             <div className="container flex flex-col lg:flex-row">
                 <div className="basis-1/2 text-white pl-12">
-                    <h1>
-                        خرید خودرو در بورس
-                        <br />
-                        <span>
-                            به قیمت بهتر از بازار
-                        </span>
-                    </h1>
+                    <section className="wrapper">
+                        <h1 >
+                            خرید خودرو در بورس
+                            <br />
+                            <div className="slidingVertical">
+                                <span className="item">
+                                    <h1>
+                                        به قیمت بهتر از بازار
+                                    </h1>
+                                    <h1>
+                                        بدون واسطه
+                                    </h1>
+                                    <h1>
+                                        بدون قرعه‌کشی
+                                    </h1>
+                                </span>
+                            </div>
+                        </h1>
+                    </section>
                     <p className="mt-20">
                         با دریافت کد معاملاتی بورس کالا در کارگزاری توانا می‌توانید خودروهای قابل عرضه را با قیمت بهتر از دیگران خریداری کنید. اگر در سجام احراز هویت کرده‌اید در کم‌تر از ۵ دقیقه می‌توانید کد معاملاتی بورس کالا را دریافت کنید.
                     </p>

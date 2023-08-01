@@ -16,7 +16,7 @@ export function Tab(props: TabProps) {
     return (
         <button
             className={twMerge(
-                `lg:text-center text-right w-full lg:w-auto lg:px-10 px-5 transition-all duration-200 lg:translate-y-0.5 py-4 font-[farhang] text-[18px] font-[900]`,
+                `lg:text-center text-right focus:outline-0 w-full lg:w-auto lg:px-10 px-5 transition-all duration-200 lg:translate-y-0.5 py-4 font-[farhang] text-[18px] font-[900]`,
                 className
             )}
             onClick={() => {

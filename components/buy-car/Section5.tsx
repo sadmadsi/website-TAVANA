@@ -1,4 +1,5 @@
 import { ChevronLeftIcon } from "@heroicons/react/20/solid"
+import Link from "next/link"
 import { Button } from "../common/button"
 
 export const Section5 = () => {
@@ -13,11 +14,13 @@ export const Section5 = () => {
                     <p className="pl-12 mt-24">
                         به‌منظور ثبت‌نام و خرید خودرو در بورس می‌توانید علاوه بر سامانه ایبیگو به‌صورت حضوری به شعب کارگزاری توانا در سراسر کشور نیز مراجعه کنید. مرکز پشتیبانی مشتریان کارگزاری توانا نیز در رابطه با مراحل مختلف خرید خودرو در بورس و دیگر موارد پاسخ‌گوی شما است.
                     </p>
-                    <Button isSecondary className={'mt-24'}>
-                        مشاهده شعبه
-                        <ChevronLeftIcon className="h-5 w-5 mr-5" />
-                    </Button>
-                    <div className="flex justify-between mt-12 mb-5 md:mb-0">
+                    <Link href={'/branches'}>
+                        <Button isSecondary className={'mt-24'}>
+                            مشاهده شعبه
+                            <ChevronLeftIcon className="h-5 w-5 mr-5" />
+                        </Button>
+                    </Link>
+                    <div className="flex justify-between mt-24 mb-5 md:mb-0">
                         <div>
                             مرکز پشیبانی
                         </div>

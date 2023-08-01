@@ -17,7 +17,7 @@ export const Section2 = () => {
             </div>
 
             <Tabs className="justify-center" mobileResposive={false}>
-                <Tab className={twMerge('lg:!px-32 px-3', activeTab === 1 ? 'bg-milky border-black border-2 border-b-0 shadow-[0_2px_0px_0px_#eeecec]' : 'font-medium ')}
+                <Tab className={twMerge('lg:!px-32 px-3 border-2 border-b-0 font-[600] text-[22px]', activeTab === 1 ? 'bg-milky border-black shadow-[0_2px_0px_0px_#eeecec]' : 'border-transparent')}
                     key={'item1'}
                     component={<Tab1 />}
                     renderTab={() => <div className="text-center">
@@ -26,7 +26,7 @@ export const Section2 = () => {
                     index={1}
                     isActiveTab={activeTab === 1}
                     setActiveTab={setActiveTab} />
-                <Tab className={twMerge('lg:!px-32 px-3', activeTab === 2 ? 'bg-milky border-black border-2 border-b-0 shadow-[0_2px_0px_0px_#eeecec]' : 'font-medium ')}
+                <Tab className={twMerge('lg:!px-32 px-3 border-2 border-b-0 font-[600] text-[22px]', activeTab === 2 ? 'bg-milky border-black shadow-[0_2px_0px_0px_#eeecec]' : 'border-transparent')}
                     key={'item2'}
                     component={<Tab2 />}
                     renderTab={() => <div className="text-center">
@@ -35,7 +35,7 @@ export const Section2 = () => {
                     index={2}
                     isActiveTab={activeTab === 2}
                     setActiveTab={setActiveTab} />
-                <Tab className={twMerge('lg:!px-32 px-3', activeTab === 3 ? 'bg-milky border-black border-2 border-b-0 shadow-[0_2px_0px_0px_#eeecec]' : 'font-medium ')}
+                <Tab className={twMerge('lg:!px-32 px-3 border-2 border-b-0 font-[600] text-[22px]', activeTab === 3 ? 'bg-milky border-black shadow-[0_2px_0px_0px_#eeecec]' : 'border-transparent')}
                     key={'item3'}
                     component={<Tab3 />}
                     renderTab={() => <div className="text-center">

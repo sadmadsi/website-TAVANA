@@ -1,4 +1,5 @@
 import { ChevronLeftIcon } from "@heroicons/react/20/solid"
+import Link from "next/link"
 import { Button } from "../../common/button"
 
 export const Tab1 = () => {
@@ -9,10 +10,12 @@ export const Tab1 = () => {
                 <p>
                     اگر در سجام ثبت‌نام و احراز هویت شده‌اید می‌توانید به‌صورت آنلاین و غیرحضوری از طریق ثبت‌نام در سامانه ایبیگو، کد معاملاتی بورس کالا را دریافت کنید. در صورتی که در سجام احراز هویت نکرده‌اید، ابتدا باید احراز هویت خود را تکمیل کنید. یادآور می‌شود اگر در ۲ سال گذشته وارد بورس شده‌اید حتما احراز هویت سجام را تکمیل کرده‌اید.
                 </p>
-                <Button className={'bg-transparent md:mt-24 mt-5 bg-black'}>
-                    دریافت کد بورسی کالا
-                    <ChevronLeftIcon className="h-5 w-5 mr-5" />
-                </Button>
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'}>
+                    <Button className={'bg-transparent md:mt-24 mt-5 bg-black'}>
+                        دریافت کد بورسی کالا
+                        <ChevronLeftIcon className="h-5 w-5 mr-5" />
+                    </Button>
+                </Link>
             </div>
         </div>
     )
