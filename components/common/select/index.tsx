@@ -20,7 +20,7 @@ export const Select = (props: SelectProps) => {
         <Listbox value={selected} onChange={onChange}>
             {({ open, value }: { open: any, value: any }) => (
                 <>
-                    <div className="relative w-full">
+                    <div className="relative w-full min-h-[37px]">
                         <div className={`ml-4 text-[#9a9a9a] font-bold absolute text-sm  
                         duration-300 ${open || value ? '-translate-y-6' : 'translate-y-2'}`}>
                             {label}
