@@ -28,7 +28,7 @@ export const Section1 = () => {
                     <p className="mt-20">
                         با دریافت کد معاملاتی بورس کالا در کارگزاری توانا می‌توانید خودروهای قابل عرضه را با قیمت بهتر از دیگران خریداری کنید. اگر در سجام احراز هویت کرده‌اید در کم‌تر از ۵ دقیقه می‌توانید کد معاملاتی بورس کالا را دریافت کنید.
                     </p>
-                    <a href="https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony" target={'_blank'}>
+                    <a href="https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony" className="w-fit" target={'_blank'} rel="noreferrer">
                         <Button isSecondary className={'mb-5 md:mb-0'}>
                             دریافت کد بورس کالا
                             <span>
