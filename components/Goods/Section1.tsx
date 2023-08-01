@@ -16,9 +16,9 @@ export default function Section1() {
                         از مشـاوره تا معامله<br />
                         در بورس کالا
                     </h1>
-                    <h2>
+                    <p className="mt-12">
                         قدم به قدم همراهتان هستیم.
-                    </h2>
+                    </p>
                     <Button className="mt-12 mb-8 lg:mb-0" isSecondary onClick={handleClickScroll}>
                         درخواست مشاوره
                     </Button>

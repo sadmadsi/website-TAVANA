@@ -12,7 +12,7 @@ export default function Section2() {
                     <h2>معامله<br />
                         با پلتفرم برتر بازار</h2>
                     <p className='mt-20 mb-10'>سامانه آنلاین پلاس را بر بستر اپلیکیشن موبایل <br /> و‌ نسخه تحت وب به شما ارائه می‌دهیم.</p>
-                    <Link href={'/send-otp'} className={'w-fit lg:mb-0 mb-8'}>
+                    <Link href={'https://sejam.tavanaco.ir/send-otp'} target={'_blank'} className={'w-fit lg:mb-0 mb-8'} rel="noreferrer">
                         <Button>
                             ثبت‌ نام آنلاین
                             و معامله سهام

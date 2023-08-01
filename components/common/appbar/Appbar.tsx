@@ -114,7 +114,7 @@ const buyBourse = () => {
                 </p>
             </Link>
             <div className="md:basis-1/3 grow md:flex md:flex-col space-y-8 md:h-[50vh] md:mr-10">
-                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]">
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]" target={'_blank'} rel="noreferrer">
                     <div className="m-auto bg-[url(/photos/sign-in-for-car.png)] h-full bg-cover bg-no-repeat bg-center md:mx-0 mx-5">
                         {/* <Image alt="signup" src={'/photos/sign-in-for-car.png'} fill /> */}
                     </div>
@@ -122,7 +122,7 @@ const buyBourse = () => {
                         ثبت نام در سامانه خرید خودرو در بورس
                     </p>
                 </Link>
-                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]">
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]" target={'_blank'} rel="noreferrer">
                     <div className="m-auto bg-[url(/photos/enter-car-platform.png)] h-full bg-cover bg-no-repeat bg-center md:mx-0 mx-5">
                         {/* <Image alt="signup" src={'/photos/enter-car-platform.png'} fill /> */}
                     </div>

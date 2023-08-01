@@ -56,6 +56,7 @@ module.exports = {
       mustard: '#EDCA44',
       jolbaki: '#9FB54A',
       mute:'#9a9a9a',
+      charcoal:'#d9d9d9',
       disable:'#00000078',
       primarytavana:'#8a4f9e',
       secondaryTavana:'#f4bd30',

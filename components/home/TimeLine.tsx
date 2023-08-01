@@ -16,7 +16,7 @@ export default function TimeLine() {
                     <p className='py-10 text-2xl'>
                         زندگی دکمه بازگشت ندارد. سرمایه‌گذاری را اثربخش  و ساده کرده‌ایم تا بهتر زندگی کنید.
                     </p>
-                    <Link href={'/vestOne'} className={'!w-fit'}>
+                    <Link href={'/vest-one'} className={'!w-fit'}>
                         <Button className={'!inline-flex'}>
                             آشنایی با وست‌وان
                             <span>

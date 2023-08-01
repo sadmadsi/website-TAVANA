@@ -1,6 +1,7 @@
 import {
     ChevronLeftIcon,
 } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 import { Button } from '../common/button'
 
 export default function Section5() {
@@ -15,14 +16,16 @@ export default function Section5() {
                     <p className='sm:mt-32 mt-12 mb-10 pl-[40px]'>
                         برای ادامه مسیر روی تخصص شما حساب می‌کنیم. خودتان باشید تا در نوآوری موفق شویم.
                     </p>
-                    <Button isSecondary className={'mb-16 !mt-8'}>
-                        <span>
-                            مشاهده فرصت های همکاری
-                        </span>
-                        <span className='mr-2'>
-                            <ChevronLeftIcon className='h-5 w-5' />
-                        </span>
-                    </Button>
+                    <Link href={'https://jobinja.ir/companies/powerful-financial-services/jobs'} target={'_blank'} rel="noreferrer">
+                        <Button isSecondary className={'mb-16 !mt-8'}>
+                            <span>
+                                مشاهده فرصت های همکاری
+                            </span>
+                            <span className='mr-2'>
+                                <ChevronLeftIcon className='h-5 w-5' />
+                            </span>
+                        </Button>
+                    </Link>
                 </div>
                 <div className="grow basis-1/2">
                     <img src='/photos/jobs.jpg' width={'864px'} height={'886px'} />

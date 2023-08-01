@@ -12,7 +12,7 @@ export default function Section4() {
                     <h2>خرید خودرو <br /> در بورس کالا</h2>
                     <p className='text-justify mt-24 mb-10'>به‌صورت غیرحضوری کد معاملاتی فیزیکی بورس کالا را در کارگزاری توانا دریافت و <br className="sm:block hidden" />بدون قرعه‌کشی و پس از انتخاب قیمت، خودروی مدنظرتان را خریداری کنید.</p>
                     <div className='flex md:flex-row flex-col md:space-x-2 md:items-end space-y-2 mb-5 md:space-x-reverse'>
-                        <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className={'w-fit'}>
+                        <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className={'w-fit'} >
                             <Button >
                                 دریافت کد معاملاتی بورس کالا
                                 <span className='mr-2'>
@@ -20,7 +20,7 @@ export default function Section4() {
                                 </span>
                             </Button>
                         </Link>
-                        <Link href={'/buy-car'} className={'w-fit'}>
+                        <Link href={'/buy-car'} className={'w-fit'} >
                             <Button className="bg-transparent border-2 font-bold border-black text-black hover:bg-white/90">
                                 اطلاعات تکمیلی
                                 <span className='mr-2'>

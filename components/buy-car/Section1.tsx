@@ -1,4 +1,5 @@
 import { ChevronLeftIcon } from "@heroicons/react/20/solid"
+import Link from "next/link"
 import { Button } from "../common/button"
 
 export const Section1 = () => {
@@ -28,14 +29,14 @@ export const Section1 = () => {
                     <p className="mt-20">
                         با دریافت کد معاملاتی بورس کالا در کارگزاری توانا می‌توانید خودروهای قابل عرضه را با قیمت بهتر از دیگران خریداری کنید. اگر در سجام احراز هویت کرده‌اید در کم‌تر از ۵ دقیقه می‌توانید کد معاملاتی بورس کالا را دریافت کنید.
                     </p>
-                    <a href="https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony" className="w-fit" target={'_blank'} rel="noreferrer">
+                    <Link href="https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony" className="w-fit" target={'_blank'} rel="noreferrer">
                         <Button isSecondary className={'mb-5 md:mb-0'}>
                             دریافت کد بورس کالا
                             <span>
                                 <ChevronLeftIcon className="h-5 w-5 mr-5" />
                             </span>
                         </Button>
-                    </a>
+                    </Link>
                 </div>
                 <div className="basis-1/2">
                     <img src="/photos/car.jpg" width={864} height={949} alt="car" />

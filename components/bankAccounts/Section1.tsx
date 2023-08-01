@@ -62,7 +62,7 @@ export default function Section1() {
         {
             bank: 'بانک ملت',
             icon: 'bank_mellat.png',
-            branch: 'بورس',
+            branch: ' بورس کالا',
             branchCode: '6205',
             accountNumber: '9663101128',
             shebaNumber: 'IR 740120000000009663101128'
@@ -72,10 +72,17 @@ export default function Section1() {
             icon: 'bank_tejarat.png',
             branch: 'تخصصی بورس',
             branchCode: '1043',
+            accountNumber: '104323383',
+            shebaNumber: 'IR 870180000000000104323383'
+        },
+        {
+            bank: 'بانک تجارت',
+            icon: 'bank_tejarat.png',
+            branch: 'تخصصی بورس',
+            branchCode: '1043',
             accountNumber: '104323391',
             shebaNumber: 'IR 650180000000000104323391'
         },
-
         {
             bank: 'بانک پارسیان',
             icon: 'logo-parsian.png',
@@ -115,7 +122,7 @@ export default function Section1() {
             icon: 'bank_saman.svg',
             branch: 'سی تیر',
             branchCode: '849',
-            accountNumber: '849-40-106472-1',
+            accountNumber: '849-40-106472-2',
             shebaNumber: 'IR 260560084904000106472002'
         },
         {
@@ -139,7 +146,7 @@ export default function Section1() {
             icon: 'logo-keshavarzi.png',
             branch: 'بورس کالا',
             branchCode: ' 4819',
-            accountNumber: '4819',
+            accountNumber: '541342392',
             shebaNumber: 'IR 910160000000000541342392'
         },
         {
@@ -202,19 +209,17 @@ export default function Section1() {
                     <div className="text-right m-0 max-w-[820px]">
                         <h1 className="text-[62px]">حساب‌های بانکی توانا</h1>
                         <p className="sm:mt-16 mt-7">
-                            مشتری گرامی به‌منظور واریز روزانه مبالغ کم‌تر از ۱۰۰ میلیون تومان به حساب معاملاتی  اوراق بهادار، بهتر است از واریز آنی در سامانه آنلاین پلاس استفاده کنید.(سقف واریز برای  هر‌کارت بانکی ۵۰ میلیون تومان در روز است.)
+                            مشتری گرامی به‌منظور واریز روزانه مبالغ کم‌تر از ۱۰۰ میلیون تومان به حساب معاملاتی  اوراق بهادار، بهتر است از واریز آنی در سامانه آنلاین پلاس استفاده کنید.(سقف واریز برای  هر‌کارت بانکی ۱۰۰ میلیون تومان در روز است.)
                         </p>
                     </div>
 
                 </div>
             </div>
-            <div className="bg-[#D9D9D9] flex flex-col py-16">
+            <div className="bg-[#D9D9D9] flex flex-col py-24">
                 <div className="container">
-
                     <AccordionComponent title="معاملات اوراق بهادار" items={accounts} />
-                    <AccordionComponent title="بورس انرژی" items={energyAccounts} />
-                    <AccordionComponent title="بورس کالا" items={goodsAccounts} />
-
+                    <AccordionComponent title="بورس کالا" items={energyAccounts} />
+                    <AccordionComponent title="بورس انرژی" items={goodsAccounts} />
                 </div>
             </div>
         </div>
