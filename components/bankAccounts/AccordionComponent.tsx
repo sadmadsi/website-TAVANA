@@ -2,10 +2,13 @@ import { ChevronLeftIcon, ChevronDownIcon, DocumentDuplicateIcon } from "@heroic
 import { toast } from "react-toastify";
 import Image from "next/image";
 
-export default function AccordionComponent({ items, title }: { items: any, title: string }) {
+export default function AccordionComponent({ items, title, isOpen, onChange, index }: { items: any, title: string, isOpen: number, onChange: any, index: number }) {
     return (
         <div className="collapse border-b-2 first:border-t-2 border-black font-[Farhang]">
-            <input type="checkbox" className="peer w-full" />
+            <input type="checkbox" checked={isOpen === index + 1} className="peer w-full" onChange={(e) => {
+                console.log(e.target.checked);
+                onChange(e.target.checked ? index + 1 : -1)
+            }} />
             <div className="collapse-title bg-transparent flex px-2 py-7 peer-checked:hidden">
                 <ChevronLeftIcon className={'h-7 w-7 '} />
                 <h4 className="font-[800] text-[23px] mr-5">{title}</h4>
@@ -52,22 +55,22 @@ export default function AccordionComponent({ items, title }: { items: any, title
                                         <div className="sm:hidden">کد شعبه:</div>
                                         <div>{account.branchCode}</div>
                                     </div>
-                                    <div className="flex sm:block text-center sm:w-1/5 w-full justify-between px-5 py-2">
+                                    <div className="flex sm:block text-center sm:w-1/5 w-full cursor-pointer justify-between px-5 py-2 tooltip" data-tip="کپی در کلیپبورد" onClick={() => { navigator.clipboard.writeText(account.accountNumber), toast.success('با موفقیت در کلیپبورد ذخیره شد', { position: 'top-center' }) }}>
                                         <div className="sm:hidden">شماره حساب:</div>
-                                        <div className="flex w-fit sm:mx-auto items-center">
-                                            <span>
+                                        <div className="flex w-fit sm:mx-auto items-center md:text-base text-xs">
+                                            <span >
                                                 {account.accountNumber}
                                             </span>
-                                            <span className="h-4 mr-2 cursor-pointer" onClick={() => { navigator.clipboard.writeText(account.accountNumber), toast.success('با موفقیت در کلیپبورد ذخیره شد', { position: 'top-center' }) }}>
+                                            <span className="h-4 mr-2 " >
                                                 <DocumentDuplicateIcon className="h-4 w-4" />
                                             </span>
                                         </div>
                                     </div>
-                                    <div className="flex sm:block text-center sm:w-1/3 w-full justify-between px-5 py-2 overflow-hidden">
+                                    <div className="flex sm:block text-center cursor-pointer sm:w-1/3 w-full justify-between px-5 py-2 tooltip" data-tip="کپی در کلیپبورد" onClick={() => { navigator.clipboard.writeText(account.shebaNumber), toast.success('با موفقیت در کلیپبورد ذخیره شد', { position: 'top-center' }) }}>
                                         <div className="sm:hidden">شماره شبه:</div>
-                                        <div className="flex w-fit items-center sm:mx-auto">
+                                        <div className="flex w-fit items-center sm:mx-auto md:text-base text-xs">
                                             {account.shebaNumber}
-                                            <span className="h-4 mr-2 cursor-pointer" onClick={() => { navigator.clipboard.writeText(account.shebaNumber), toast.success('با موفقیت در کلیپبورد ذخیره شد', { position: 'top-center' }) }}>
+                                            <span className="h-4 mr-2" >
                                                 <DocumentDuplicateIcon className="h-4 w-4" />
                                             </span>
                                         </div>

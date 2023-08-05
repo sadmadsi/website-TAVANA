@@ -1,6 +1,6 @@
 import {
     ChevronLeftIcon,
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/solid'
 
 export default function Section2() {
 
@@ -31,9 +31,9 @@ export default function Section2() {
                 <div className="sm:grid lg:grid-cols-3 grid-cols-1 gap-3">
                     {cards.map((item: any) => {
                         return (
-                            <div key={item.title} className="border-4 border-black px-10 py-14 text-black flex w-full mb-4 sm:mb-0">
+                            <div key={item.title} className="border-4 border-black px-10 py-14 pb-4 text-black flex w-full mb-4 sm:mb-0">
                                 <span className='w-5 ml-5'>
-                                    <ChevronLeftIcon className='h-5 w-5 ml-5' />
+                                    <ChevronLeftIcon className='h-5 w-5 ml-5 ' />
                                 </span>
                                 <p className='h-[150px]'>{item.title}</p>
                             </div>

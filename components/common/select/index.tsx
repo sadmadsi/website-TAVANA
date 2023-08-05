@@ -21,11 +21,11 @@ export const Select = (props: SelectProps) => {
             {({ open, value }: { open: any, value: any }) => (
                 <>
                     <div className="relative w-full ">
-                        <div className={`ml-4 text-[#9a9a9a] font-bold absolute text-sm  
-                        duration-300 ${open || value ? '-translate-y-6' : 'translate-y-2'}`}>
+                        <div className={`ml-4 text-[#9a9a9a] font-bold absolute text-sm 
+                        duration-300 ${open || value ? '-translate-y-6 text-xs' : 'translate-y-2'}`}>
                             {label}
                         </div>
-                        <Listbox.Button className={twMerge(`relative min-h-[37px] h-full text-[16px] p-0 leading-6 py-2 bg-transparent border-0 border-b ${open || value ? 'border-black border-b-2' : 'border-[#9a9a9a]'} focus:ring-0 w-full`, className)}>
+                        <Listbox.Button className={twMerge(`relative min-h-[37px] h-full text-base p-0 leading-6 py-2 bg-transparent border-0 border-b ${open || value ? 'border-black border-b-2' : 'border-[#9a9a9a]'} focus:ring-0 w-full`, className)}>
                             <span className="flex items-center">
                                 <span className="ml-3 block truncate">{selected}</span>
                             </span>
@@ -41,19 +41,20 @@ export const Select = (props: SelectProps) => {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                         >
-                            <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+                            <Listbox.Options className="absolute z-10 max-h-56 w-full overflow-auto bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none text-sm">
                                 {options.map((item: any) => (
                                     <Listbox.Option
                                         key={item}
-                                        className={({ active }: { active: any }) =>
+                                        className={({ active, selected }: { active: any, selected: any }) =>
                                             classNames(
-                                                active ? ' bg-gray-300' : 'text-gray-900',
-                                                'relative cursor-pointer select-none py-2 pl-3 pr-9'
+                                                active ? ' bg-sky-100' : 'text-gray-900',
+                                                selected ? ' bg-sky-100' : '',
+                                                'relative cursor-pointer select-none py-2 pl-3 pr-3'
                                             )
                                         }
                                         value={item}
                                     >
-                                        {({ selected, active }: { selected: any, active: any }) => (
+                                        {({ selected }: { selected: any, active: any }) => (
                                             <>
                                                 <div className="flex items-center">
                                                     <span
@@ -62,17 +63,6 @@ export const Select = (props: SelectProps) => {
                                                         {item}
                                                     </span>
                                                 </div>
-
-                                                {selected ? (
-                                                    <span
-                                                        className={classNames(
-                                                            active ? 'text-white' : 'text-indigo-600',
-                                                            'absolute inset-y-0 right-0 flex items-center pr-4'
-                                                        )}
-                                                    >
-                                                        <CheckIcon className="h-5 w-5" aria-hidden="true" />
-                                                    </span>
-                                                ) : null}
                                             </>
                                         )}
                                     </Listbox.Option>

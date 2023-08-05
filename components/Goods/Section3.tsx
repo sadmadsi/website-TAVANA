@@ -1,7 +1,3 @@
-import {
-    ChevronLeftIcon,
-} from '@heroicons/react/24/outline'
-
 export default function Section3() {
 
     const cards = [
@@ -34,7 +30,7 @@ export default function Section3() {
         },
     ]
     return (
-        <div className="bg-primarytavana">
+        <div className="bg-primarytavana py-[5vw]">
             <div className="container p-10">
                 <h2 >
                     {' مهم‌ترین موارد قابل معامله'}
@@ -42,7 +38,7 @@ export default function Section3() {
                     {" " + 'در بورس کالای ایران'}
                 </h2>
                 <div className="relative w-full text-center mt-32">
-                    <div className="sm:grid xl:grid-cols-3 sm:grid-cols-2 gap-8">
+                    <div className="sm:grid xl:grid-cols-3 sm:grid-cols-2 gap-16 md:w-4/5">
                         {cards.map((item: any) => {
                             return (
                                 <div key={item.title} className="border-4 shadow-[7px_7px_0_0_black] border-black p-5 text-black bg-[#ac8ee8] flex sm:mb-0 mb-4">

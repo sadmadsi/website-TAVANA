@@ -36,7 +36,7 @@ export default function Section5() {
     ]
 
     return (
-        <div className="bg-[#D9D9D9] text-black py-20" id='section-4'>
+        <div className="bg-[#D9D9D9] text-black py-16" id='section-4'>
             <div className="container py-10 flex flex-col h-full">
                 <h2>
                     عقب نایستید!
@@ -44,8 +44,8 @@ export default function Section5() {
                     قدم به قدم همراهتان هستیم
                 </h2>
                 <p className="mt-16">برای شروع و درخواست مشاوره فرم ذیل را تکمیل کنید</p>
-                <div className="lg:grid sm:grid-cols-3 gap-8 mt-32 mb-20 space-y-10 lg:space-y-0">
-                    <Input label='نام و نام خانوادگی' onChange={(e: any) => setName(e.target.value)} value={name} />
+                <div className="grid sm:grid-cols-3 grid-cols-1 gap-16 mt-32 mb-20 ">
+                    <Input label='نام و نام خانوادگی*' onChange={(e: any) => setName(e.target.value)} value={name} />
                     <Input label='شماره تماس*' onChange={(e: any) => setMobile(e.target.value)} value={mobile} />
                     <Select label='میزان سرمایه شما برای تشکیل سبد وست وان چقدر است؟' onChange={(e: any) => setAsset(e)} options={assets} selected={asset} />
                     <Select label='آیا تا به‌حال از خدمات سبدگردانی شرکت‌های دیگر استفاده کرده‌اید؟' onChange={(e: any) => setSelected(e)} options={requests} selected={selected} />

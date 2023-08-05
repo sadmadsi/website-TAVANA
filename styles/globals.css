@@ -116,6 +116,32 @@ h1 {
     100% {  visibility: hidden;transform: translateY(0px); }
 }
 
+/*slide-in Animation*/
+@keyframes slideInFromRight{
+  0% {  visibility: visible; transform: translateX(100%);}
+  50% {  transform: translateX(0); }
+  100% {  transform: translateX(0); }
+}
+
+@keyframes slideInFromLeft{
+  0% {  visibility: visible; transform: translateX(-100%);}
+  50% {  transform: translateX(0); }
+  100% {  transform: translateX(0); }
+}
+
+@keyframes slideOutToLeft{
+  0% { visibility: visible; transform: translateX(0);}
+  85% { transform: translateX(-100%); }
+  90% { visibility: hidden;transform: translateX(-100%); }
+  100% { visibility: hidden;transform: translateX(100%); }
+}
+
+@keyframes slideOutToRight{
+  0% { visibility: visible; transform: translateX(0);}
+  85% { transform: translateX(100%); }
+  90% {  visibility: hidden; transform: translateX(100%); }
+  100% { visibility: hidden; transform: translateX(100%); }
+}
 
 @media (max-width:575px) {
   h1 {
@@ -133,10 +159,6 @@ h1 {
     font-size: 16px !important;
   }
 
-  p{
-    font-size: 16px !important;
-    line-height: 28px !important;
-  }
   .linearBlack {
     background: linear-gradient(to bottom,
         black 85%,
@@ -149,9 +171,7 @@ h1 {
 
 @layer base {
   p {
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 38px;
+    @apply md:text-[22px] font-[600] md:leading-[38px] text-[16px] leading-[28px]
   }
 
   h1 {
@@ -190,7 +210,7 @@ h1 {
     width: calc(100% - 60px);
   }
   .appbar-item {
-    @apply flex !text-[22px] !leading-[52px] font-[800] font-[farhang] w-fit md:w-full sm:mx-0 mx-auto items-center md:text-2xl text-[#ffffff73] tracking-[1px] hover:text-white transition-all;
+    @apply flex !text-[22px] !leading-[52px] font-[800] font-[farhang] w-fit md:w-full sm:mx-0 mx-auto items-center md:text-2xl md:text-[#ffffff73] text-white tracking-[1px] hover:text-white transition-all;
   }
 
   .manager-name{

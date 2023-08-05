@@ -15,8 +15,7 @@ export const Section2 = () => {
                 <h2 className="py-32">برنامه عرضه و خرید خودرو در بورس کالا</h2>
                 <p>برای مشاهده فهرست عرضه و خرید خودرو در بورس جدول ذیل را مشاهده کنید. این فهرست بلافاصله پس از انتشار اطلاعیه جدید عرضه توسط سازمان بورس، بروزرسانی می‌شود.</p>
             </div>
-
-            <Tabs className="justify-center" mobileResposive={false}>
+            <Tabs className="justify-center" mobileResposive={false} containerBackGround="bg-milky">
                 <Tab className={twMerge('lg:!px-32 px-3 border-2 border-b-0 font-[600] text-[22px]', activeTab === 1 ? 'bg-milky border-black shadow-[0_2px_0px_0px_#eeecec]' : 'border-transparent')}
                     key={'item1'}
                     component={<Tab1 />}

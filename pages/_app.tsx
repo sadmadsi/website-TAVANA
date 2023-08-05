@@ -12,6 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>گروه مالی توانا - سرمایه گذاری کارگزاری بورس</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <ToastContainer
         ref={toast}

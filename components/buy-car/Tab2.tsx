@@ -31,7 +31,7 @@ export const Tab2 = () => {
                     </Button>
                 </div>
                 <div className={twMerge("w-full overflow-hidden transition-[max-height] ", open ? 'max-h-[1000px]' : 'max-h-0')}>
-                    <div className={twMerge("flex lg:flex-row flex-col gap-4 mt-16")}>
+                    <div className={twMerge("flex lg:flex-row flex-col gap-16 mt-16")}>
                         <Input label="نام و نام خانوداگی" onChange={(e: any) => updateQuery('name', e.target.value)} value={query.name} />
                         <Input label="شماره تماس*" onChange={(e: any) => updateQuery('mobile', e.target.value)} value={query.mobile} />
                         <Select label="انتخاب خودرو" onChange={(e: any) => updateQuery('car', e.value)} options={[]} selected={query.car} />

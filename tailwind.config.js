@@ -11,17 +11,6 @@ module.exports = {
       center: 'true',
       padding: '1rem'
     },
-    extend:{
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: 0 },
-          '100%': { opacity: 1 },
-        },
-        animation: {
-          fadeIn: 'fadeIn 1s ease-in-out 1',
-        }
-      }
-    },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
       current: colors.current,

@@ -39,16 +39,6 @@ const otherCities = [
         location: 'https://www.google.com/maps/place/%DA%A9%D8%A7%D8%B1%DA%AF%D8%B2%D8%A7%D8%B1%DB%8C+%D8%AA%D9%88%D8%A7%D9%86%D8%A7(%D9%85%D8%B4%D8%A7%D9%88%D8%B1%D8%A7%D9%86+%D8%B3%D9%87%D8%A7%D9%85+%D8%B3%D8%A7%D8%A8%D9%82+)%E2%80%AD/@35.3269392,51.635612,20z/data=!4m6!3m5!1s0x3f91976f533d71e9:0xe215920ca39177a!8m2!3d35.3269704!4d51.6360023!16s%2Fg%2F11hw2y65ft'
     },
     {
-        title: 'دفتر پذیرش کرج',
-        address: 'آدرس: میدان مادر، ابتدای بلوار یادگار امام، بین خیابان رودکی و خیام، ساختمان مدرن، طبقه پنجم، واحد 11',
-        detail: [
-            'کدپستی : 3133614812',
-            'تلفن 1: 32760925 - 026',
-            'تلفن 2: 32762414 - 026'
-        ],
-        location: 'https://www.google.com/maps/search/35.816932,+50.959782?shorturl=1'
-    },
-    {
         title: 'تالار اختصاصی کرج',
         address: 'کرج، چهارراه هفت تیر، ابتدای بلوار دانش آموز، ساختمان صبا پلاک 744، طبقه اول واحد 1',
         detail: [
@@ -88,7 +78,7 @@ const otherCities = [
         location: 'https://www.google.com/maps/search/29.621962,+52.515033?shorturl=1'
     },
     {
-        title: 'تالار اختصاصی کرج',
+        title: 'تالار اختصاصی شیراز،',
         address: 'شیراز، آباده، خیابان 17 شهریور، نبش خیابان پورپاکار، پلاک 10',
         detail: [
             'کدپستی : 7391817877',
@@ -251,28 +241,29 @@ export default function Section1() {
     const [location, setLocation] = useState('Tehran')
 
     return (
-        <div className="relative mt-[118px] sm:pt-[120px] flex flex-col text-white">
-            <div className="h-[30vh] container bg-[url(/icons/Vector_faded.png)] bg-contain sm:bg-left bg-bottom bg-no-repeat bg-black flex flex-col text-white">
-                <div className="sm:py-10 pt-[100px]">
+        <div className="relative mt-[118px] sm:pt-[50px] flex flex-col text-white">
+            <div className="relative container bg-black flex text-white">
+                <div className="sm:py-28 pt-[100px]">
                     <h1>شعب و نمایندگی ها</h1>
                 </div>
+                <img src="/icons/Vector_faded.png" height={339} width={339} className={'md:mr-auto absolute md:relative'} alt="" />
             </div>
             <div className="bg-transparent flex flex-col py-10">
                 <div className="flex space-x-5 space-x-reverse border-b-2 border-b-white sm:px-20 mb-10">
-                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-2 translate-y-0.5 ${location === 'Tehran' ? ' border-white border-2 border-b-black shadow-[0_1px_0px_0px_black]' : 'bg-transparent border-transparent'}`} onClick={() => {
+                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-2 translate-y-0.5 bg-transparent ${location === 'Tehran' ? ' border-white border-2 border-b-black shadow-[0_1px_0px_0px_black]' : 'border-transparent'}`} onClick={() => {
                         setArray(Tehran)
                         setLocation('Tehran')
                     }}>
                         تهران
                     </Button>
-                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-0 translate-y-0.5 ${location === 'Others' ? ' border-white border-2 border-b-black shadow-[0_1px_0px_0px_black]' : 'bg-transparent border-transparent'}`} onClick={() => {
+                    <Button className={`sm:px-20 px-10 sm:mr-0 mr-5 py-3 border-b-0 translate-y-0.5 bg-transparent ${location === 'Others' ? ' border-white border-2 border-b-black shadow-[0_1px_0px_0px_black]' : 'border-transparent'}`} onClick={() => {
                         setArray(otherCities)
                         setLocation('Others')
                     }}>
                         سایر شهرها
                     </Button>
                 </div>
-                <div className="container space-y-5">
+                <div className="container space-y-5 pb-40">
                     {
                         array.map((item: any) => {
                             return (

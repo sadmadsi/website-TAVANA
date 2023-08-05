@@ -22,7 +22,7 @@ export const Section5 = () => {
                     </Link>
                     <div className="flex justify-between mt-24 mb-5 md:mb-0">
                         <div>
-                            مرکز پشیبانی
+                            مرکز پشتیبانی مشتریان:
                         </div>
                         <a href="tel:02142906" className="border-b border-dashed border-white">
                             021-42906

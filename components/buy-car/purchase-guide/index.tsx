@@ -31,7 +31,7 @@ export const PurchaseGuide = () => {
                             </Button>
                         </Link>
                         <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'}>
-                            <Button className={'bg-transparent !mt-0'} isSecondary>
+                            <Button className={'bg-transparent !mt-0 hover:bg-white hover:text-black'} isSecondary>
                                 ثبت نام سجام
                                 <ChevronLeftIcon className="h-5 w-5 md:mr-5" />
                             </Button>
@@ -41,7 +41,7 @@ export const PurchaseGuide = () => {
                 </div>
                 <div id={'rahnama'}></div>
                 <Tabs >
-                    <Tab className={twMerge('md:!px-12 md:py-8', activeTab === 1 ? 'bg-white border-black md:border-2 !border-b-0 shadow-[0_1px_0px_0px_white]' : '')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 1 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item1'}
                         component={<Tab1 />}
                         renderTab={() => <div className={`flex items-center ${activeTab === 1 ? 'bg-[url(/digits/1-active.svg)]' : 'bg-[url(/digits/1-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
@@ -52,7 +52,7 @@ export const PurchaseGuide = () => {
                         index={1}
                         isActiveTab={activeTab === 1}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8', activeTab === 2 ? 'bg-white border-black md:border-2 !border-b-0 shadow-[0_1px_0px_0px_white]' : '')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 2 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item2'}
                         component={<Tab2 />}
                         renderTab={() => <div className={`flex items-center ${activeTab === 2 ? 'bg-[url(/digits/2-active.svg)]' : 'bg-[url(/digits/2-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
@@ -63,7 +63,7 @@ export const PurchaseGuide = () => {
                         index={2}
                         isActiveTab={activeTab === 2}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8', activeTab === 3 ? 'bg-white border-black md:border-2 !border-b-0 shadow-[0_1px_0px_0px_white]' : '')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 3 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item2'}
                         component={<Tab3 />}
                         renderTab={() => <div className={`flex items-center ${activeTab === 3 ? 'bg-[url(/digits/3-active.svg)]' : 'bg-[url(/digits/3-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
@@ -74,7 +74,7 @@ export const PurchaseGuide = () => {
                         index={3}
                         isActiveTab={activeTab === 3}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8', activeTab === 4 ? 'bg-white border-black md:border-2 !border-b-0 shadow-[0_1px_0px_0px_white]' : '')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 4 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item2'}
                         component={<Tab4 />}
                         renderTab={() => <div className={`flex items-center ${activeTab === 4 ? 'bg-[url(/digits/4-active.svg)]' : 'bg-[url(/digits/4-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
@@ -85,7 +85,7 @@ export const PurchaseGuide = () => {
                         index={4}
                         isActiveTab={activeTab === 4}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8', activeTab === 5 ? 'bg-white border-black md:border-2 !border-b-0 shadow-[0_1px_0px_0px_white]' : '')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 5 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item5'}
                         component={<Tab5 />}
                         renderTab={() => <div className={`flex items-center ${activeTab === 5 ? 'bg-[url(/digits/5-active.svg)]' : 'bg-[url(/digits/5-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>

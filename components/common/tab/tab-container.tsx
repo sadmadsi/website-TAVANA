@@ -1,8 +1,9 @@
-import type { FC } from "react";
+import { FC, useState } from "react";
 import React from "react";
 import { twMerge } from 'tailwind-merge'
 
-export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobileResposive?: boolean, }> = ({ children, className, mobileResposive = true }) => {
+export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobileResposive?: boolean, containerBackGround?: string }> = ({ children, className, mobileResposive = true, containerBackGround }) => {
+    const [wasActive, setWasActive] = useState(1)
 
     function tabValidator(tab: React.ReactElement): boolean {
         const type = tab.type as React.FunctionComponent;
@@ -22,8 +23,11 @@ export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobi
                     })
                 }
             </div>
-            <div className={`${mobileResposive ? 'hidden lg:block' : 'block'} border-t-2 border-current`}>
+            <div className={twMerge(`${mobileResposive ? 'hidden lg:block' : 'block'} h-fit border-t-2 border-current`, containerBackGround)}>
                 {children.map((item, i) => {
+                    if (item.props.isActiveTab && wasActive !== i + 1) {
+                        setWasActive(i + 1)
+                    }
                     return (
                         <div key={i} className={`${item.props.isActiveTab ? "visible" : "hidden"}`}>
                             {item.props.component}

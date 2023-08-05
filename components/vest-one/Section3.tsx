@@ -52,7 +52,7 @@ export default function Section3() {
                         </div>
                     </div>
                 </div>
-                <Tabs mobileResposive={false}>
+                <Tabs mobileResposive={false} containerBackGround="bg-white">
                     <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab === 1 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
                         key={'item1'}
                         component={<Analytic />}

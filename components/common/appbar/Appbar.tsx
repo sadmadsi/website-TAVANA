@@ -39,7 +39,7 @@ const moamelat = () => {
                 <div className="relative m-auto h-[250px] bg-[url(/photos/sign-in.png)]  bg-contain bg-no-repeat bg-center w-2/3">
                     {/* <Image alt="signup" src={'/photos/sign-in.png'} fill /> */}
                 </div>
-                <p className="mt-3 text-center -translate-y-7 font-[farhang] font-bold">
+                <p className="mt-3 text-center -translate-y-7 font-[farhang] font-bold !text-[22px]">
                     ثبت‌ نام در کارگزاری توانا
                 </p>
             </Link>
@@ -47,7 +47,7 @@ const moamelat = () => {
                 <div className="relative m-auto h-[250px] bg-[url(/photos/enter-trade.png)]  bg-contain bg-no-repeat bg-center w-2/3">
                     <Image alt="signup" src={'/photos/enter-trade.png'} fill />
                 </div>
-                <p className="mt-3 text-center -translate-y-7 font-[farhang] font-bold">
+                <p className="mt-3 text-center -translate-y-7 font-[farhang] font-bold !text-[22px]">
                     ورود به سامانه معاملات آنلاین
                 </p>
             </Link>
@@ -86,7 +86,7 @@ const about = () => {
                 <div className="relative m-auto h-[250px] w-2/3 bg-[url(/photos/about.png)] bg-contain bg-no-repeat bg-center">
                     {/* <Image alt="signup" src={'/photos/about.png'} fill /> */}
                 </div>
-                <p className="text-center -translate-y-7 font-bold font-[farhang]">
+                <p className="text-center -translate-y-7 font-bold font-[farhang] !text-[22px]">
                     معرفی اجمالی توانا
                 </p>
             </Link>
@@ -94,7 +94,7 @@ const about = () => {
                 <div className="relative m-auto h-[250px] bg-[url(/photos/online-branches.png)] bg-contain bg-no-repeat bg-center w-2/3">
                     {/* <Image alt="signup" src={'/photos/online-branches.png'} fill /> */}
                 </div>
-                <p className="text-center -translate-y-7 font-bold font-[farhang]">
+                <p className="text-center -translate-y-7 font-bold font-[farhang] !text-[22px]">
                     درخواست شعبه  دیجیتال
                 </p>
             </Link>
@@ -105,30 +105,31 @@ const about = () => {
 const buyBourse = () => {
     return (
         <>
-            <Link href={'/buy-car'} className="relative md:h-[50vh] grow md:basis-2/3 basis-1/3 md:w-3/5">
-                <div className="m-auto h-[200px] bg-[url(/photos/car-news.png)] md:h-full bg-contain bg-no-repeat bg-center md:mx-0 mx-5">
+            <Link href={'/buy-car'} className="relative md:h-[50vh] grow md:basis-2/3 basis-1/3 md:w-3/5 w-full mx-auto font-[farhang]">
+                <div className="m-auto h-[220px] bg-[url(/photos/car-news.png)] md:h-full bg-contain bg-no-repeat bg-center md:mx-0 mx-auto w-full">
                     {/* <Image alt="signup" src={'/photos/car-news.png'} fill /> */}
                 </div>
-                <p className="absolute w-full text-center -bottom-3">
+                <p className="absolute w-full text-center font-[800] !text-[22px] -bottom-5">
                     راهنمای خرید خودرو در بورس و اخبار روز
                 </p>
             </Link>
-            <div className="md:basis-1/3 grow md:flex md:flex-col space-y-8 md:h-[50vh] md:mr-10">
-                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]" target={'_blank'} rel="noreferrer">
-                    <div className="m-auto bg-[url(/photos/sign-in-for-car.png)] h-full bg-cover bg-no-repeat bg-center md:mx-0 mx-5">
+            <div className="md:basis-1/3 grow md:flex md:flex-col space-y-8 md:h-[50vh] md:mr-10 font-[farhang] ">
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative block grow h-[200px]" target={'_blank'} rel="noreferrer">
+                    <div className="relative m-auto bg-[url(/photos/sign-in-for-car.png)] bg-cover bg-no-repeat bg-center md:bg-left md:mr-auto mx-auto w-[75%] md:h-[80%] h-full">
                         {/* <Image alt="signup" src={'/photos/sign-in-for-car.png'} fill /> */}
+                        <p className="absolute w-full text-center -bottom-5 font-[800] !text-[22px]">
+                            ثبت نام در سامانه خرید خودرو در بورس
+                        </p>
                     </div>
-                    <p className="absolute w-full text-center -bottom-3">
-                        ثبت نام در سامانه خرید خودرو در بورس
-                    </p>
+
                 </Link>
-                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative grow h-[200px]" target={'_blank'} rel="noreferrer">
-                    <div className="m-auto bg-[url(/photos/enter-car-platform.png)] h-full bg-cover bg-no-repeat bg-center md:mx-0 mx-5">
+                <Link href={'https://tavana.ebgo.ir/GetBourseCode/getInformation?src=harmony'} className="relative block grow h-[200px]" target={'_blank'} rel="noreferrer">
+                    <div className="relative m-auto bg-[url(/photos/enter-car-platform.png)] bg-cover bg-no-repeat bg-center md:bg-left md:mr-auto mx-auto w-[75%] md:h-[80%] h-full">
                         {/* <Image alt="signup" src={'/photos/enter-car-platform.png'} fill /> */}
+                        <p className="absolute w-full text-center -bottom-5 font-[800] !text-[22px]">
+                            ورود به سامانه خرید خودرو در بورس
+                        </p>
                     </div>
-                    <p className="absolute w-full text-center -bottom-3">
-                        ورود به سامانه خرید خودرو در بورس
-                    </p>
                 </Link>
             </div>
         </>

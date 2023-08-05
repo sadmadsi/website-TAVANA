@@ -58,7 +58,7 @@ export default function Section3() {
                     </table>
                 </div>
                 <div>
-                    <Button isSecondary className={'mt-5 w-full md:w-fit justify-center'} onClick={() => setOpen(!open)}>
+                    <Button isSecondary={!open} className={'mt-1 w-full md:w-fit justify-center border-white'} onClick={() => setOpen(!open)}>
                         درخواست اطلاع از زمان عرضه خودرو
                         {open ? <ChevronDownIcon className="h-5 w-5 ml-5" /> : <ChevronLeftIcon className="h-5 w-5 ml-5" />}
                     </Button>

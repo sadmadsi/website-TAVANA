@@ -86,7 +86,7 @@ export default function Footer() {
     ]
     return (
         <div className="bg-[#111111] ">
-            <div className="container lg:flex lg:flex-row py-[60px] gap-16">
+            <div className="container lg:flex lg:flex-row py-[70px] gap-16">
                 <div className={'sm:flex flex-col mb-16 sm:basis-1/5 sm:mb-0 hidden'}>
                     <Image src={'/tavana/tavana-english.svg'} height={40} width={130} alt={'tavana'} />
                     <div className="flex w-fit lg:mt-auto sm:mt-32">

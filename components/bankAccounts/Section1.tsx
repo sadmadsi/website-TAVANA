@@ -1,6 +1,8 @@
+import { useState } from "react"
 import AccordionComponent from "./AccordionComponent"
 
 export default function Section1() {
+    const [isOpen, setOpen] = useState(-1)
 
     const accounts = [
         {
@@ -202,6 +204,20 @@ export default function Section1() {
         }
     ]
 
+    const information = [
+        {
+            title: "معاملات اوراق بهادار",
+            items: accounts
+        },
+        {
+            title: "بورس کالا",
+            items: energyAccounts
+        },
+        {
+            title: "بورس انرژی",
+            items: goodsAccounts
+        },
+    ]
     return (
         <div className="relative flex flex-col mt-[118px]">
             <div className="pt-24 pb-20 bg-black flex flex-col justify-end text-white">
@@ -217,9 +233,13 @@ export default function Section1() {
             </div>
             <div className="bg-[#D9D9D9] flex flex-col py-24">
                 <div className="container">
-                    <AccordionComponent title="معاملات اوراق بهادار" items={accounts} />
-                    <AccordionComponent title="بورس کالا" items={energyAccounts} />
-                    <AccordionComponent title="بورس انرژی" items={goodsAccounts} />
+                    {
+                        information.map((item: any, index: number) => {
+                            return (
+                                <AccordionComponent title={item.title} items={item.items} onChange={setOpen} isOpen={isOpen} index={index} key={item.title} />
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>
