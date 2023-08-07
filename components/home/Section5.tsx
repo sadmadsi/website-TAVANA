@@ -16,7 +16,7 @@ export default function Section5() {
                     <p className='mt-auto'>از مشاوره تا معامله،<br />
                         همه آنچه از بورس کالا نیاز دارید</p>
                     <Link href={'/kala'} className={'w-fit mx-auto sm:m-0'}>
-                        <Button className="mt-9 border-2 border-white text-white hover:bg-white hover:text-black hover:border-black" onClick={() => router.push('/goodsBrokerage')}>
+                        <Button className="mt-9 border-2 border-white text-white hover:bg-white hover:text-black hover:border-black">
                             خدمات بورس کالا
                             <span className='mr-2'>
                                 <ChevronLeftIcon className='h-5 w-5' />

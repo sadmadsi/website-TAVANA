@@ -15,7 +15,7 @@ export default function Section6() {
                         معاملات بورس انرژی</h2>
                     <p className='mt-24'>رشد سریع و همه آنچه نیاز دارید؛ پیش روی شماست</p>
                     <Link href={'/energy'} className={'w-fit lg:mb-0 mb-8'}>
-                        <Button className="mt-12" onClick={() => router.push('/energyBrokerage')}>
+                        <Button className="mt-12" >
                             خدمات بورس انرژی
                             <span className='mr-2'>
                                 <ChevronLeftIcon className='h-5 w-5' />
