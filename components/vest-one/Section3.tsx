@@ -32,7 +32,7 @@ const Managing = () => {
 }
 
 export default function Section3() {
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState<{currentTab:number,direction:number}>({currentTab:1,direction:1});
     return (
         <>
             <div className="bg-secondaryTavana pt-28">
@@ -52,8 +52,8 @@ export default function Section3() {
                         </div>
                     </div>
                 </div>
-                <Tabs mobileResposive={false} containerBackGround="bg-white">
-                    <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab === 1 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
+                <Tabs mobileResposive={false} currentTab={activeTab} containerBackGround="bg-white">
+                    <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab.currentTab === 1 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
                         key={'item1'}
                         component={<Analytic />}
                         renderTab={() => <>
@@ -65,9 +65,9 @@ export default function Section3() {
                             </p>
                         </>}
                         index={1}
-                        isActiveTab={activeTab === 1}
+                        isActiveTab={activeTab.currentTab === 1}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab === 2 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
+                    <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab.currentTab === 2 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
                         key={'item2'}
                         component={<Strategy />}
                         renderTab={() => <>
@@ -76,11 +76,12 @@ export default function Section3() {
                             </div>
                             <p className="font-black text-center font-[farhang]">
                                 مدیریت استراتژی
-                            </p>                        </>}
+                            </p>     
+                        </>}
                         index={2}
-                        isActiveTab={activeTab === 2}
+                        isActiveTab={activeTab.currentTab === 2}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab === 3 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
+                    <Tab className={twMerge('border-2 border-b-0 border-transparent', activeTab.currentTab === 3 ? 'bg-white border-black shadow-[0_2px_0px_0px_white]' : 'text-black')}
                         key={'item3'}
                         component={<Managing />}
                         renderTab={() => <>
@@ -92,7 +93,7 @@ export default function Section3() {
                             </p>
                         </>}
                         index={3}
-                        isActiveTab={activeTab === 3}
+                        isActiveTab={activeTab.currentTab === 3}
                         setActiveTab={setActiveTab} />
 
                 </Tabs>

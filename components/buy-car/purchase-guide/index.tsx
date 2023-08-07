@@ -12,7 +12,7 @@ import { Tab5 } from "./tab5";
 import Link from "next/link";
 
 export const PurchaseGuide = () => {
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState({currentTab:1,direction:1});
 
     return (
         <>
@@ -40,61 +40,61 @@ export const PurchaseGuide = () => {
                     <p className="md:my-24 my-12" >مراحل خرید خودرو در بورس کالا به شرح زیر است.</p>
                 </div>
                 <div id={'rahnama'}></div>
-                <Tabs >
-                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 1 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
+                <Tabs currentTab={activeTab} containerBackGround="bg-white">
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab.currentTab === 1 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item1'}
                         component={<Tab1 />}
-                        renderTab={() => <div className={`flex items-center ${activeTab === 1 ? 'bg-[url(/digits/1-active.svg)]' : 'bg-[url(/digits/1-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
+                        renderTab={() => <div className={`flex items-center ${activeTab.currentTab === 1 ? 'bg-[url(/digits/1-active.svg)]' : 'bg-[url(/digits/1-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
                             ثبت‌ نام و دریافت کد
                             <br className="hidden md:block" />
                             معاملاتی بورس کالا
                         </div>}
                         index={1}
-                        isActiveTab={activeTab === 1}
+                        isActiveTab={activeTab.currentTab === 1}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 2 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab.currentTab === 2 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item2'}
                         component={<Tab2 />}
-                        renderTab={() => <div className={`flex items-center ${activeTab === 2 ? 'bg-[url(/digits/2-active.svg)]' : 'bg-[url(/digits/2-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
+                        renderTab={() => <div className={`flex items-center ${activeTab.currentTab === 2 ? 'bg-[url(/digits/2-active.svg)]' : 'bg-[url(/digits/2-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
                             افتتاح حساب بانکی
                             <br className="hidden md:block" />
                             وکالتی
                         </div>}
                         index={2}
-                        isActiveTab={activeTab === 2}
+                        isActiveTab={activeTab.currentTab === 2}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 3 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab.currentTab === 3 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item2'}
                         component={<Tab3 />}
-                        renderTab={() => <div className={`flex items-center ${activeTab === 3 ? 'bg-[url(/digits/3-active.svg)]' : 'bg-[url(/digits/3-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
+                        renderTab={() => <div className={`flex items-center ${activeTab.currentTab === 3 ? 'bg-[url(/digits/3-active.svg)]' : 'bg-[url(/digits/3-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
                             واریز پیش‌ پرداخت
                             <br className="hidden md:block" />
                             به حساب وکالتی
                         </div>}
                         index={3}
-                        isActiveTab={activeTab === 3}
+                        isActiveTab={activeTab.currentTab === 3}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 4 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab.currentTab === 4 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item2'}
                         component={<Tab4 />}
-                        renderTab={() => <div className={`flex items-center ${activeTab === 4 ? 'bg-[url(/digits/4-active.svg)]' : 'bg-[url(/digits/4-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
+                        renderTab={() => <div className={`flex items-center ${activeTab.currentTab === 4 ? 'bg-[url(/digits/4-active.svg)]' : 'bg-[url(/digits/4-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
                             ثبت سفارش خرید
                             <br className="hidden md:block" />
                             خودرو
                         </div>}
                         index={4}
-                        isActiveTab={activeTab === 4}
+                        isActiveTab={activeTab.currentTab === 4}
                         setActiveTab={setActiveTab} />
-                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab === 5 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
+                    <Tab className={twMerge('md:!px-12 md:py-8 md:border-2', activeTab.currentTab === 5 ? 'bg-white border-black  !border-b-0 shadow-[0_1px_0px_0px_white]' : 'border-transparent')}
                         key={'item5'}
                         component={<Tab5 />}
-                        renderTab={() => <div className={`flex items-center ${activeTab === 5 ? 'bg-[url(/digits/5-active.svg)]' : 'bg-[url(/digits/5-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
+                        renderTab={() => <div className={`flex items-center ${activeTab.currentTab === 5 ? 'bg-[url(/digits/5-active.svg)]' : 'bg-[url(/digits/5-inactive.svg)]'} bg-contain bg-no-repeat md:bg-top bg-right md:pt-8 pt-3`}>
                             تسویه حساب و
                             <br className="hidden md:block" />
                             انتخاب محل تحویل
                         </div>}
                         index={5}
-                        isActiveTab={activeTab === 5}
+                        isActiveTab={activeTab.currentTab === 5}
                         setActiveTab={setActiveTab} />
                 </Tabs>
             </div>

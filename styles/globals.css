@@ -118,29 +118,31 @@ h1 {
 
 /*slide-in Animation*/
 @keyframes slideInFromRight{
-  0% {  visibility: visible; transform: translateX(100%);}
-  50% {  transform: translateX(0); }
+  0% {  position:relative;visibility: visible; transform: translateX(100%);}
+  50% {   position:relative;transform: translateX(0); }
   100% {  transform: translateX(0); }
 }
 
 @keyframes slideInFromLeft{
-  0% {  visibility: visible; transform: translateX(-100%);}
-  50% {  transform: translateX(0); }
+  0% {  position:relative;visibility: visible; transform: translateX(-100%);}
+  50% {   position:relative;transform: translateX(0); }
   100% {  transform: translateX(0); }
 }
 
 @keyframes slideOutToLeft{
-  0% { visibility: visible; transform: translateX(0);}
-  85% { transform: translateX(-100%); }
-  90% { visibility: hidden;transform: translateX(-100%); }
-  100% { visibility: hidden;transform: translateX(100%); }
+  0% { position:absolute;right: 0;}
+  40% { position:absolute;opacity:0;transform: translateX(-100%); }
+  85% { position:absolute;opacity:0;transform: translateX(-100%); }
+  90% { position:absolute;opacity:0;visibility: hidden;transform: translateX(-100%); }
+  100% { position:absolute;opacity:0;right: 0;visibility: hidden; }
 }
 
 @keyframes slideOutToRight{
-  0% { visibility: visible; transform: translateX(0);}
-  85% { transform: translateX(100%); }
-  90% {  visibility: hidden; transform: translateX(100%); }
-  100% { visibility: hidden; transform: translateX(100%); }
+  0% { position:absolute;right: 0;}
+  40% { position:absolute;opacity:0;transform: translateX(100%); }
+  85% { position:absolute;opacity:0;transform: translateX(100%); }
+  90% { position:absolute;opacity:0;visibility: hidden;transform: translateX(100%); }
+  100% { position:absolute;opacity:0;right: 0;visibility: hidden; }
 }
 
 @media (max-width:575px) {

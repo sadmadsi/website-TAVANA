@@ -54,7 +54,7 @@ export default function Footer() {
                     href: '/contact-us'
                 },
                 {
-                    title: 'ثبت‌ نام شعبه دیجیتال',
+                    title: 'درخواست شعبه دیجیتال',
                     href: '/digital-branch'
                 },
                 {

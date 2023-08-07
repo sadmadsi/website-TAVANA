@@ -11,7 +11,7 @@ export const Tab1 = () => {
     }
     return (
         <>
-            <div className="container md:pt-[8vw] p-5  flex flex-col lg:flex-row md:bg-transparent bg-black text-white md:text-black">
+            <div className="container md:pt-[8vw] p-5 flex flex-col lg:flex-row md:bg-primarytavana bg-black text-white md:text-black">
                 <div className="basis-1/2">
                     <h2 className="text-[45px] hidden md:block">اپلیکیشن شعبه دیجیتال توانا</h2>
                     <p className="my-12 pl-10">بستری برای شفافیت، مشاهده عملکرد و ارتباط ساده با کارگزاری توانا برای شما ایجاد کرده‌ایم.</p>

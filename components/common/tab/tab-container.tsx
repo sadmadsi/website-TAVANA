@@ -1,9 +1,7 @@
-import { FC, useState } from "react";
-import React from "react";
+import React,{ FC } from "react";
 import { twMerge } from 'tailwind-merge'
 
-export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobileResposive?: boolean, containerBackGround?: string }> = ({ children, className, mobileResposive = true, containerBackGround }) => {
-    const [wasActive, setWasActive] = useState(1)
+export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobileResposive?: boolean, containerBackGround?: string ,currentTab:any}> = ({ children, className, mobileResposive = true, containerBackGround,currentTab }) => {
 
     function tabValidator(tab: React.ReactElement): boolean {
         const type = tab.type as React.FunctionComponent;
@@ -23,17 +21,16 @@ export const Tabs: FC<{ children: React.ReactElement[]; className?: string, mobi
                     })
                 }
             </div>
-            <div className={twMerge(`${mobileResposive ? 'hidden lg:block' : 'block'} h-fit border-t-2 border-current`, containerBackGround)}>
-                {children.map((item, i) => {
-                    if (item.props.isActiveTab && wasActive !== i + 1) {
-                        setWasActive(i + 1)
+            <div className={twMerge(`${mobileResposive ? 'hidden lg:flex' : 'flex'} border-t-2 border-current`, containerBackGround)}>
+                <div className="relative min-w-[100vw]">
+                    {children.map((item, i) => {
+                        return (
+                            <div key={i} className={twMerge(currentTab.direction<0 ? `${item.props.isActiveTab ? "relative animate-[slideInFromLeft_0.5s_ease-in-out_1_forwards] z-10": "top-0 animate-[slideOutToRight_0.5s_ease-in-out_1_forwards]"}`:`${item.props.isActiveTab ? "relative animate-[slideInFromRight_0.5s_ease-in-out_1_forwards] z-10" : "top-0 animate-[slideOutToLeft_0.5s_ease-in-out_1_forwards]"}`)}>
+                                {item.props.component}
+                            </div>);
+                        })
                     }
-                    return (
-                        <div key={i} className={`${item.props.isActiveTab ? "visible" : "hidden"}`}>
-                            {item.props.component}
-                        </div>);
-                })
-                }
+                </div>
             </div>
             {mobileResposive ? <div className={twMerge("container lg:hidden flex flex-col space-y-5 " + className)}>
                 {children?.map((item, i) => {

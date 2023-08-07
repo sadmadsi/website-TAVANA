@@ -21,7 +21,7 @@ export const Tab1 = () => {
     }
 
     return (
-        <div className="bg-milky py-24">
+        <div className="bg-milky py-24 min-h-[506px]">
             <div className="container">
                 <div>
                     <p className="max-w-[880px]">در حال حاضر خودرویی برای خرید، در دسترس نیست. می‌توانید خودروی مدنظرتان را انتخاب کنید تا بلافاصله پس از اعلام سازمان بورس، زمان عرضه آن به اطلاعتان برسد.</p>
