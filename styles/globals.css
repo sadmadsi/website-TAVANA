@@ -11,12 +11,12 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-size: 14px;
-  font-family: "PelakFA";
+  font-family: "Tavana";
 }
 
 body {
   color: black;
-  overflow-y: auto ;
+  overflow-y: auto;
 }
 /* body::-webkit-scrollbar {
   width: 0.7em;
@@ -40,112 +40,180 @@ a {
   border-radius: 4px;
 } */
 
-
 h3,
 h2,
 h1 {
-  font-family: 'Farhang';
+  font-family: "Tavana";
 }
 
 /* dont touch */
 .linear {
-  background: linear-gradient(to bottom,
-      #B84E4E 80%,
-      #d9d9d9 20%)
+  background: linear-gradient(to bottom, #d36465 80%, #d9d9d9 20%);
 }
 
 /* dont touch */
 .linearBlack {
-  background: linear-gradient(to bottom,
-      black 67%,
-      white 43%)
+  background: linear-gradient(to bottom, black 67%, white 43%);
 }
 
 .linearSky {
-  background: linear-gradient(to bottom,
-  #8a4f9e 80%,
-  #d9d9d9 20%)
+  background: linear-gradient(to bottom, #a57eed 80%, #d9d9d9 20%);
 }
 
 .sentence > span {
   display: inline-block;
 }
 /*Wrapper*/
-.wrapper{
-    position: relative;
-    width: 100%;
+.wrapper {
+  position: relative;
+  width: 100%;
 }
 
 /*Vertical Sliding*/
-.slidingVertical{
+.slidingVertical {
   display: inline-block;
-  width:8em;
-  height:90px;
+  width: 8em;
+  height: 75px;
   overflow: hidden;
   vertical-align: top;
   position: relative;
 }
-.slidingVertical span  h1{
-     animation: topToBottom 6s ease-in-out infinite 0s;
-    -ms-animation: topToBottom 6s ease-in-out infinite 0s;
-    -webkit-animation: topToBottom 6s ease-in-out infinite 0s;
-     visibility: hidden;
-     bottom: 80px;
-     height: 80px;
-     padding: 5px 0;
-    position: absolute;
+.slidingVertical span h1 {
+  animation: topToBottom 6s ease-in-out infinite 0s;
+  -ms-animation: topToBottom 6s ease-in-out infinite 0s;
+  -webkit-animation: topToBottom 6s ease-in-out infinite 0s;
+  visibility: hidden;
+  bottom: 80px;
+  height: 80px;
+  padding: 5px 0;
+  position: absolute;
 }
 
-.slidingVertical span h1:nth-child(2){
+.slidingVertical span h1:nth-child(2) {
   animation-delay: 2s;
   -ms-animation-delay: 2s;
   -webkit-animation-delay: 2s;
 }
-.slidingVertical span h1:nth-child(3){
+.slidingVertical span h1:nth-child(3) {
   animation-delay: 4s;
   -ms-animation-delay: 4s;
   -webkit-animation-delay: 4s;
 }
 
 /*topToBottom Animation*/
-@keyframes topToBottom{
-    42% {visibility: visible;transform: translateY(0);}
-    50% { visibility: visible;transform: translateY(80px); }
-    75% { visibility: visible;transform: translateY(80px); }
-    82% {  visibility: hidden;transform: translateY(160px); }
-    100% {  visibility: hidden;transform: translateY(0px); }
+@keyframes topToBottom {
+  42% {
+    visibility: visible;
+    transform: translateY(0);
+  }
+  50% {
+    visibility: visible;
+    transform: translateY(80px);
+  }
+  75% {
+    visibility: visible;
+    transform: translateY(80px);
+  }
+  82% {
+    visibility: hidden;
+    transform: translateY(160px);
+  }
+  100% {
+    visibility: hidden;
+    transform: translateY(0px);
+  }
 }
 
 /*slide-in Animation*/
-@keyframes slideInFromRight{
-  0% {  position:relative;visibility: visible; transform: translateX(100%);}
-  50% {   position:relative;transform: translateX(0); }
-  100% {  transform: translateX(0); }
+@keyframes slideInFromRight {
+  0% {
+    position: relative;
+    visibility: visible;
+    transform: translateX(100%);
+  }
+  50% {
+    position: relative;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-@keyframes slideInFromLeft{
-  0% {  position:relative;visibility: visible; transform: translateX(-100%);}
-  50% {   position:relative;transform: translateX(0); }
-  100% {  transform: translateX(0); }
+@keyframes slideInFromLeft {
+  0% {
+    position: relative;
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+  50% {
+    position: relative;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-@keyframes slideOutToLeft{
-  0% { position:absolute;right: 0;}
-  40% { position:absolute;opacity:0;transform: translateX(-100%); }
-  85% { position:absolute;opacity:0;transform: translateX(-100%); }
-  90% { position:absolute;opacity:0;visibility: hidden;transform: translateX(-100%); }
-  100% { position:absolute;opacity:0;right: 0;visibility: hidden; }
+@keyframes slideOutToLeft {
+  0% {
+    position: absolute;
+    right: 0;
+  }
+  40% {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  85% {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  90% {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+  }
+  100% {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    visibility: hidden;
+  }
 }
 
-@keyframes slideOutToRight{
-  0% { position:absolute;right: 0;}
-  40% { position:absolute;opacity:0;transform: translateX(100%); }
-  85% { position:absolute;opacity:0;transform: translateX(100%); }
-  90% { position:absolute;opacity:0;visibility: hidden;transform: translateX(100%); }
-  100% { position:absolute;opacity:0;right: 0;visibility: hidden; }
+@keyframes slideOutToRight {
+  0% {
+    position: absolute;
+    right: 0;
+  }
+  40% {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  85% {
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  90% {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+  100% {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    visibility: hidden;
+  }
 }
 
-@media (max-width:575px) {
+@media (max-width: 575px) {
   h1 {
     line-height: 42px !important;
     font-size: 36px !important;
@@ -162,9 +230,7 @@ h1 {
   }
 
   .linearBlack {
-    background: linear-gradient(to bottom,
-        black 85%,
-        white 15%)
+    background: linear-gradient(to bottom, black 85%, white 15%);
   }
 }
 @tailwind base;
@@ -173,27 +239,27 @@ h1 {
 
 @layer base {
   p {
-    @apply md:text-[22px] font-[600] md:leading-[38px] text-[16px] leading-[28px]
+    @apply md:text-[26px] md:leading-[44px] text-[16px] leading-[28px];
   }
 
   h1 {
-    font-size: 62px;
-    line-height: 70px;
+    font-size: 66px;
+    font-weight: 800;
+    line-height: 90px;
   }
 
   h2 {
     font-size: 54px;
-    font-weight: 900;
+    font-weight: 800;
     line-height: 70px;
   }
 
-  h3{
+  h3 {
     font-size: 42px;
     font-weight: 900;
     line-height: 70px;
   }
   .footer-li {
-    font-family: 'Farhang';
     color: #757575;
     font-size: 16px;
     font-weight: 500;
@@ -201,40 +267,37 @@ h1 {
   }
 
   .footer-header {
-    font-family: 'Farhang';
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
     color: #fff;
   }
 
-  .photos{
+  .photos {
     width: calc(100% - 60px);
   }
   .appbar-item {
-    @apply flex !text-[22px] !leading-[52px] font-[800] font-[farhang] w-fit md:w-full sm:mx-0 mx-auto items-center md:text-2xl md:text-[#ffffff73] text-white tracking-[1px] hover:text-white transition-all;
+    @apply flex !text-[22px] !leading-[52px] font-[800] w-fit md:w-full sm:mx-0 mx-auto items-center md:text-2xl md:text-[#ffffff73] text-white tracking-[1px] hover:text-white transition-all;
   }
 
-  .manager-name{
+  .manager-name {
     color: #000;
     font-weight: 900;
     margin-top: 16px;
     line-height: 28px;
-    font-family: 'Farhang';
-    @apply text-[16px] sm:text-[20px] mb-0 sm:mb-[8px]
+    @apply text-[16px] sm:text-[24px] mb-0 sm:mb-[8px];
   }
 
-  .manager-position{
+  .manager-position {
     color: #6a6a6a;
-    font-weight: 400;
+    font-weight: 50;
     line-height: 28px;
-    font-family: 'Farhang';
-    @apply text-[12px] sm:text-[14px] 
+    @apply text-[12px] sm:text-[20px];
   }
 }
 
-@layer components{
-  .container{
-    @apply mx-auto sm:max-w-full w-[90vw] p-0
+@layer components {
+  .container {
+    @apply mx-auto sm:max-w-full w-[90vw] p-0;
   }
 }

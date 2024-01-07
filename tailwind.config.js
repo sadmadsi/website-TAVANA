@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
@@ -8,8 +8,8 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: 'true',
-      padding: '1rem'
+      center: "true",
+      padding: "1rem",
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -39,17 +39,17 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      navy: '#6CC7C1',
-      milk: '#EAEAEA',
-      milky:'#eeecec',
-      mustard: '#EDCA44',
-      jolbaki: '#9FB54A',
-      mute:'#9a9a9a',
-      charcoal:'#d9d9d9',
-      disable:'#00000078',
-      primarytavana:'#8a4f9e',
-      secondaryTavana:'#f4bd30',
-      tertiaryTavana:'#B84E4E',
+      navy: "#6CC7C1",
+      milk: "#EAEAEA",
+      milky: "#eeecec",
+      mustard: "#EDCA44",
+      jolbaki: "#9FB54A",
+      mute: "#9a9a9a",
+      charcoal: "#d9d9d9",
+      disable: "#00000078",
+      primarytavana: "#A57EED",
+      secondaryTavana: "#f4bd30",
+      tertiaryTavana: "#B84E4E",
     }),
   },
   plugins: [
@@ -57,13 +57,20 @@ module.exports = {
     require("flowbite/plugin"),
     plugin(function ({ addBase, theme }) {
       addBase({
-        'h1': { fontSize: theme('fontSize.6xl'), fontWeight: theme('fontWeight.black') },
-        'h2': { fontSize: theme('fontSize.2xl'), fontWeight: theme('fontWeight.semibold') },
-        'h3': { fontSize: theme('fontSize.7xl'), fontWeight: theme('fontWeight.black') },
-      })
+        h1: {
+          fontSize: theme("fontSize.6xl"),
+          fontWeight: theme("fontWeight.black"),
+        },
+        h2: {
+          fontSize: theme("fontSize.2xl"),
+          fontWeight: theme("fontWeight.semibold"),
+        },
+        h3: {
+          fontSize: theme("fontSize.7xl"),
+          fontWeight: theme("fontWeight.black"),
+        },
+      });
     }),
-    function ({ addComponents }) {
-      
-    }
-  ]
-}
+    function ({ addComponents }) {},
+  ],
+};
