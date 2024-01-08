@@ -43,7 +43,7 @@ const moamelat = () => {
           </span>
         </Link>
       </div>
-      <Link href={"https://sejam.tavanaco.ir/send-otp"} className="grow">
+      <Link href={"https://sejam.tavanaco.ir"} className="grow">
         <div className="relative m-auto h-[250px] bg-[url(/photos/sign-in.png)]  bg-contain bg-no-repeat bg-center w-2/3">
           {/* <Image alt="signup" src={'/photos/sign-in.png'} fill /> */}
         </div>

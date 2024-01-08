@@ -17,7 +17,7 @@ export default function Section2() {
             به شما ارائه می‌دهیم.
           </p>
           <Link
-            href={"https://sejam.tavanaco.ir/send-otp"}
+            href={"https://sejam.tavanaco.ir"}
             target={"_blank"}
             className={"w-fit lg:mb-0 mb-8"}
             rel="noreferrer"
